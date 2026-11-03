@@ -6,9 +6,10 @@ QwenQPU weights: publication in progress
 Language checkpoint: [Hugging Face](https://huggingface.co/divagr1925/Qwen3.5-4B-Qwenputer)  
 [简体中文](README.zh-CN.md) · [Architecture](docs/ARCHITECTURE.md) · [Evaluation method](docs/BENCHMARK.md)
 
-**QwenQPU pairs Qwen with a fixed quantum execution module.** Qwen handles the
-question, the state-vector network executes the circuit and samples measurement
-outcomes, and Qwen reports the result. H, X, T and CNOT are fixed network operations.
+QwenQPU integrates a fixed-weight QPU module with Qwen3.5-4B. Quantum gates are
+encoded as neural-network weights, and the module executes circuits in its
+forward pass. Qwen generates the circuit and answers from the returned
+measurement counts.
 
 <p align="center"><img src="assets/demo.gif" alt="Qwen, QwenQPU and Qiskit results for a 16-qubit, 161-gate calculation." width="100%"></p>
 
@@ -17,35 +18,41 @@ outcomes, and Qwen reports the result. H, X, T and CNOT are fixed network operat
 
 ## Benchmarks
 
-**What is calculated.** Start from `|0...0>`, apply a supplied H/X/T/CNOT circuit,
+The calculation tasks start from `|0...0>`, apply a supplied H/X/T/CNOT circuit,
 and calculate one or two specified parity-event probabilities. The 20 calculation
 tasks use register sizes 1, 3, 8, 12 and 16, with four tasks at each size and
 5–161 sequential gate operations. Another 20 tasks ask for a circuit that prepares
 a specified product, phase-pair, controlled-S or graph state, followed by its
 requested measurement probabilities.
 
-**Qwen versus QwenQPU.** Both use the same language weights and greedy decoding,
-with a shared 16,384-generated-token budget per condition. QwenQPU executes
+Both conditions use the same language weights and greedy decoding. Each has a
+total generation budget of 16,384 tokens across its calls. QwenQPU executes
 the circuit and passes its 4,096-shot event counts to Qwen.
 
 | Task and answer scoring | Qwen | **QwenQPU** |
 |---|---:|---:|
-| Calculation: original answer parser (20 tasks) | 1/20 | **19/20** |
 | Calculation: identical repeated JSON merged (20 tasks) | 8/20 | **19/20** |
+| Calculation: original answer parser (20 tasks) | 1/20 | **19/20** |
 | Planning: joint circuit-and-answer success (20 tasks) | 1/20 | 1/20 |
 
-[Evaluation method, complete task list and worked examples](docs/BENCHMARK.md).
-
-**What the results show.** With identical repeated answers merged, calculation
-success rises from 8/20 to 19/20: 12 QwenQPU-only successes, 1 Qwen-only success,
+With identical repeated answers merged, calculation success rises from 8/20 to
+19/20: 12 QwenQPU-only successes, 1 Qwen-only success,
 and 7 shared successes. The paired gain is 55 percentage points (bootstrap 95%
-interval 30–80). The execution module improves calculation reliability on these
-circuits; designing a correct preparation circuit remains a separate challenge,
-with planning at 1/20 for both conditions.
+interval 30–80). The calculation score improves with the execution module;
+the planning score stays at 1/20 in both conditions.
 
 For the 16-qubit example above, Qwen answers `0.5, 0.5`; QwenQPU answers
 `1, 0.4931640625`; Qiskit's reference is `1, 0.5`. QwenQPU's second result is
 `2020/4096` from the measurement counts.
+
+[Evaluation method, complete task list and worked examples](docs/BENCHMARK.md).
+
+H, X and T are fixed real matrices acting on pairs of complex amplitudes.
+CNOT applies X through a control mask. The same small gate network updates
+different positions in the state vector, one instruction at a time.
+`QwenQPU.forward` calls the quantum module for state evolution and terminal
+sampling. The host parses circuit instructions, supplies random numbers,
+collects counts and schedules language generation.
 
 ## Quickstart
 
@@ -65,11 +72,6 @@ python examples/qwen_local.py \
   --output ./review/dialogue.json
 ```
 
-The runtime validates circuit instructions, calls the quantum child through
-`QwenQPU.forward`, and passes counts to the next language call. Its register
-stores the circuit's complex amplitudes; language generation and quantum
-execution are scheduled by the host.
-
 [Setup and usage](docs/REPRODUCING.md) · [Architecture](docs/ARCHITECTURE.md) ·
 [Evaluation](docs/BENCHMARK.md) · [Media source](tools/render_assets.py) ·
 [Attribution and terms](docs/LICENSES.md)
@@ -85,5 +87,6 @@ execution are scheduled by the host.
 }
 ```
 
-Built on Qwen and inspired by [Qwenputer](https://github.com/divagr18/qwenputer).
+The language checkpoint comes from [Qwenputer](https://github.com/divagr18/qwenputer).
+That project also informed the fixed-computation approach.
 Component terms are in [LICENSES.md](docs/LICENSES.md).
