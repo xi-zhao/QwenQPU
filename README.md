@@ -2,7 +2,7 @@
   <img src="assets/banner.png" alt="QwenQPU: quantum circuits and measurement probabilities." width="100%">
 </p>
 
-QwenQPU weights: [Hugging Face](https://huggingface.co/xxx1221/QwenQPU)  
+QwenQPU weights: [Hugging Face](https://huggingface.co/xi-zhao/QwenQPU)  
 Language checkpoint: [Hugging Face](https://huggingface.co/divagr1925/Qwen3.5-4B-Qwenputer)  
 [简体中文](README.zh-CN.md) · [Architecture](docs/ARCHITECTURE.md) · [Evaluation method](docs/BENCHMARK.md)
 
@@ -67,7 +67,7 @@ This runs the circuit shown above and reports its event counts and probabilities
 To download the weights and run a Qwen-to-QPU dialogue:
 
 ```bash
-hf download xxx1221/QwenQPU --local-dir ./QwenQPU-weights
+hf download xi-zhao/QwenQPU --local-dir ./QwenQPU-weights
 python QwenQPU-weights/install_qwenqpu.py
 python QwenQPU-weights/QwenQPU-runtime/examples/qwen_local.py \
   --model-path ./QwenQPU-weights --max-generated-tokens 16384 \
