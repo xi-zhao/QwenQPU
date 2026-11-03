@@ -1,0 +1,317 @@
+{
+  "reference": "retained independent Qiskit complex128",
+  "values": [
+    {
+      "id": "P08-2",
+      "reference_probabilities": {
+        "o1": 0.5,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P01-2",
+      "reference_probabilities": {
+        "o1": 1.0
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P08-3",
+      "reference_probabilities": {
+        "o1": 0.5,
+        "o2": 0.8535533905932737
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P16-4",
+      "reference_probabilities": {
+        "o1": 0.24999999999999997,
+        "o2": 0.375
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C12-1",
+      "reference_probabilities": {
+        "o1": 0.0,
+        "o2": 0.0
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C08-4",
+      "reference_probabilities": {
+        "o1": 0.4999999999999999,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C03-4",
+      "reference_probabilities": {
+        "o1": 0.9149429560328757,
+        "o2": 0.4558058261758407
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P16-1",
+      "reference_probabilities": {
+        "o1": 1.0,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P03-3",
+      "reference_probabilities": {
+        "o1": 0.5,
+        "o2": 0.8535533905932737
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P01-1",
+      "reference_probabilities": {
+        "o1": 1.0
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P03-2",
+      "reference_probabilities": {
+        "o1": 0.5,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P08-4",
+      "reference_probabilities": {
+        "o1": 0.25,
+        "o2": 0.37500000000000006
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P16-3",
+      "reference_probabilities": {
+        "o1": 0.5,
+        "o2": 0.8535533905932737
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C12-4",
+      "reference_probabilities": {
+        "o1": 0.4999999999999999,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P03-4",
+      "reference_probabilities": {
+        "o1": 0.24999999999999994,
+        "o2": 0.24999999999999994
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P01-4",
+      "reference_probabilities": {
+        "o1": 0.1464466094067263
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P01-3",
+      "reference_probabilities": {
+        "o1": 0.8535533905932737
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C03-2",
+      "reference_probabilities": {
+        "o1": 0.49999999999999994,
+        "o2": 1.0
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P08-1",
+      "reference_probabilities": {
+        "o1": 1.0,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C08-1",
+      "reference_probabilities": {
+        "o1": 0.0,
+        "o2": 0.0
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C03-3",
+      "reference_probabilities": {
+        "o1": 0.49999999999999983,
+        "o2": 0.49999999999999994
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C08-3",
+      "reference_probabilities": {
+        "o1": 0.0,
+        "o2": 0.5000000000000001
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C12-2",
+      "reference_probabilities": {
+        "o1": 0.5,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P12-2",
+      "reference_probabilities": {
+        "o1": 0.5,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P12-1",
+      "reference_probabilities": {
+        "o1": 1.0,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C16-2",
+      "reference_probabilities": {
+        "o1": 0.0,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C16-4",
+      "reference_probabilities": {
+        "o1": 1.0,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C01-3",
+      "reference_probabilities": {
+        "o1": 0.1464466094067263
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P12-4",
+      "reference_probabilities": {
+        "o1": 0.24999999999999997,
+        "o2": 0.375
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P12-3",
+      "reference_probabilities": {
+        "o1": 0.49999999999999994,
+        "o2": 0.8535533905932736
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C01-2",
+      "reference_probabilities": {
+        "o1": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P03-1",
+      "reference_probabilities": {
+        "o1": 1.0,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "P16-2",
+      "reference_probabilities": {
+        "o1": 0.5,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C08-2",
+      "reference_probabilities": {
+        "o1": 0.0,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C16-3",
+      "reference_probabilities": {
+        "o1": 0.14644660940672627,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C16-1",
+      "reference_probabilities": {
+        "o1": 0.0,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C12-3",
+      "reference_probabilities": {
+        "o1": 0.5,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C01-1",
+      "reference_probabilities": {
+        "o1": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C03-1",
+      "reference_probabilities": {
+        "o1": 5.004680467665248e-34,
+        "o2": 0.5
+      },
+      "reference": "independent Qiskit complex128"
+    },
+    {
+      "id": "C01-4",
+      "reference_probabilities": {
+        "o1": 0.6401650429449551
+      },
+      "reference": "independent Qiskit complex128"
+    }
+  ]
+}

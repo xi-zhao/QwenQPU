@@ -32,8 +32,8 @@ python tools/render_assets.py
 python tools/render_benchmark.py
 ```
 
-State replay runs the unchanged core gate-by-gate. Counts must match the selected
-historical record before rendering proceeds. The renderer uses only that trace;
+The current trace executes C16-4 gate-by-gate. Its event counts must match the
+selected evaluation record before rendering proceeds. The renderer uses only that trace;
 no language generation or network request occurs. Media sources do not copy or
 depend on the reference animation. Fonts use local DIN/Avenir/Menlo when available,
 with DejaVu fallbacks; font files themselves are not bundled.

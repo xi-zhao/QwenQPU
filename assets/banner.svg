@@ -521,10 +521,10 @@
 <circle cx="1272" cy="408" r=".6" fill="#233744"/>
 <text x="48" y="61" fill="#92aab7" font-family="Avenir Next,DejaVu Sans,sans-serif" font-size="15" font-weight="600">LANGUAGE / FIXED QUANTUM NETWORK</text>
 <text x="43" y="174" fill="#edf3f5" font-family="DIN Condensed,DejaVu Sans Condensed,sans-serif" font-size="100" font-weight="700">Qwen<tspan fill="#63e5d3">QPU</tspan></text>
-<text x="48" y="230" fill="#edf3f5" font-family="Avenir Next,DejaVu Sans,sans-serif" font-size="28" font-weight="400">A language model. A fixed quantum network.</text>
-<text x="48" y="275" fill="#92aab7" font-family="Avenir Next,DejaVu Sans,sans-serif" font-size="20" font-weight="400">1–16 qubits · H / X / T / CNOT · no training</text>
+<text x="48" y="230" fill="#edf3f5" font-family="Avenir Next,DejaVu Sans,sans-serif" font-size="28" font-weight="400">QPU inside a language model</text>
+<text x="48" y="275" fill="#92aab7" font-family="Avenir Next,DejaVu Sans,sans-serif" font-size="20" font-weight="400">H / X / T / CNOT · state-vector execution</text>
 <rect x="48" y="320" width="456" height="38" rx="7" fill="#101d28" stroke="#233744"/>
-<text x="63" y="345" fill="#63e5d3" font-family="Avenir Next,DejaVu Sans,sans-serif" font-size="14" font-weight="600">IDEAL CLASSICAL SIMULATION · HOST SCHEDULED</text>
+<text x="63" y="345" fill="#63e5d3" font-family="Avenir Next,DejaVu Sans,sans-serif" font-size="14" font-weight="600">FIXED GATES · SAMPLED COUNTS</text>
 <text x="785" y="134" fill="#92aab7" font-family="Menlo,monospace" font-size="16" font-weight="400">q0</text>
 <path d="M830 128 H1215" stroke="#233744" stroke-width="2"/>
 <text x="785" y="208" fill="#92aab7" font-family="Menlo,monospace" font-size="16" font-weight="400">q1</text>

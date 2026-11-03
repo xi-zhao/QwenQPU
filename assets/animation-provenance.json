@@ -1,23 +1,23 @@
 {
+  "media_revision": "github-v3-C16-4-comparison",
+  "question_id": "C16-4",
+  "source": "frozen eval40 v4",
   "original_artwork": true,
-  "reference_assets_copied": false,
-  "trace_sha256": "e1eda2eb32a60001f7d9b531cadd4529e15ace9cc353a662754e68bd06fb733c",
-  "renderer_sha256": "ad0a6184bd8fc8ce9460c8f480c0c3bf340a912af004e4625d5c3c6f44e84205",
-  "frames": 288,
+  "new_language_generation": false,
+  "core_trace_matches_recorded_counts": true,
+  "segmented_80_plus_81_state_identical": true,
+  "duration_seconds": 30,
   "fps": 12,
-  "duration_seconds": 24,
+  "frames": 360,
   "dimensions": [
     1280,
     720
   ],
-  "speed_is_illustrative": true,
-  "physical_QPU": false,
-  "new_language_inference": false,
-  "source": "Recorded Qwen GHZ16 packet, unchanged core CPU replay, historical counts reproduced",
-  "media_revision": "github-v2-concise-labels",
-  "on_screen_context": [
-    "CLASSICAL SIMULATION",
-    "DEMO REPLAY"
-  ],
-  "extended_provenance": "docs/MEDIA.md"
+  "timing": "illustrative presentation timing, no wall-clock performance shown",
+  "trace_sha256": "5d6732d3008db8c19af45f79e2034f8c0cb88cd67ce688232405116a8bcb146b",
+  "renderer_sha256": "c0b5a693b21cd090065b74e0d17e5a193ef941482f223831d49b5e9968d4110a",
+  "source_record_sha256": {
+    "plain": "0f12eaa22e5c45b6c248440e13c09ccae48bca6c1db874bbfee60350d1c333d2",
+    "enhanced": "363a04fa32b70fa55152a0203c5101dd09f590c8073cd4ce312e5e652d51923c"
+  }
 }
