@@ -2,7 +2,7 @@
   <img src="assets/banner.png" alt="QwenQPU：量子线路与测量概率" width="100%">
 </p>
 
-QwenQPU 权重：[Hugging Face](https://huggingface.co/xxx1221/QwenQPU)  
+QwenQPU 权重：[Hugging Face](https://huggingface.co/xi-zhao/QwenQPU)  
 语言权重：[Hugging Face](https://huggingface.co/divagr1925/Qwen3.5-4B-Qwenputer)  
 [English](README.md) · [架构](docs/ARCHITECTURE.md) · [评测方法](docs/BENCHMARK.md)
 
@@ -60,7 +60,7 @@ python examples/reproduce_benchmark_case.py --case C16-4
 下载权重后，可运行 Qwen 与量子模块的对话：
 
 ```bash
-hf download xxx1221/QwenQPU --local-dir ./QwenQPU-weights
+hf download xi-zhao/QwenQPU --local-dir ./QwenQPU-weights
 python QwenQPU-weights/install_qwenqpu.py
 python QwenQPU-weights/QwenQPU-runtime/examples/qwen_local.py \
   --model-path ./QwenQPU-weights --max-generated-tokens 16384 \
