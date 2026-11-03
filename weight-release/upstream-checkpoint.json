@@ -1,0 +1,56 @@
+{
+  "model_id": "divagr1925/Qwen3.5-4B-Qwenputer",
+  "revision": "2d9068508f2b680badb7abcded96fdd107e9ba5d",
+  "license_metadata": "apache-2.0",
+  "weights_total_bytes": 18715279016,
+  "shards": [
+    {
+      "file": "model-00001-of-00008.safetensors",
+      "bytes": 3798614160,
+      "sha256": "eb519d673020a5485df8a0e5383ea3f64c815679610ac5593c4791f546d4a5f6"
+    },
+    {
+      "file": "model-00002-of-00008.safetensors",
+      "bytes": 2173322760,
+      "sha256": "87d9524fed7a5ec476bc46e78661c3218a1ba8c37f5090129e34b8ce681a600b"
+    },
+    {
+      "file": "model-00003-of-00008.safetensors",
+      "bytes": 2197122920,
+      "sha256": "afd73680effff12a6d5455612e618fd71188e220e84ad944290f1c5881b68430"
+    },
+    {
+      "file": "model-00004-of-00008.safetensors",
+      "bytes": 2156489312,
+      "sha256": "3e8f9714c41163e33650241dc054c863e74fc73f5ef7990227aef1ce28da902a"
+    },
+    {
+      "file": "model-00005-of-00008.safetensors",
+      "bytes": 2205264744,
+      "sha256": "7942fca5c6994cc22b4c7e393620e22e6f107d528a933f717e7ddb914f5cb19b"
+    },
+    {
+      "file": "model-00006-of-00008.safetensors",
+      "bytes": 2148363592,
+      "sha256": "ed59921915d7e28697116730231792e12e6b229887be23c545434acb9d8a11c6"
+    },
+    {
+      "file": "model-00007-of-00008.safetensors",
+      "bytes": 2172166984,
+      "sha256": "9147f4faecde9255788ab81eb6d241f68ab066b64a02cd868c2f25b0518e640a"
+    },
+    {
+      "file": "model-00008-of-00008.safetensors",
+      "bytes": 1863934544,
+      "sha256": "72b67f53bfbd8ff615ab564adab5b967f8d652f7bb79823c8319d90970c8bc5f"
+    }
+  ],
+  "metadata_sha256": "d392148ea4366213c97d950e80f55658bcd91e8033d9102212a78e2b07fc101e",
+  "files_downloaded_for_this_showcase": [
+    "README.md",
+    "public API metadata",
+    "Qwen base LICENSE text"
+  ],
+  "weight_shards_downloaded_or_copied": false,
+  "new_HF_repository_created": false
+}

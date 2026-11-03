@@ -1,0 +1,27 @@
+{
+  "format": "qwenqpu-fixed-gates-v1",
+  "parameter_count": 48,
+  "shape": [
+    3,
+    4,
+    4
+  ],
+  "dtype": "float32",
+  "trained": false,
+  "gate_names": [
+    "H",
+    "X",
+    "T"
+  ],
+  "CNOT": "controlled X with graph mask",
+  "n_qubits": [
+    1,
+    16
+  ],
+  "max_sequential_gates_between_resets": 1000,
+  "weights_file": "quantum_gates.pt",
+  "weights_sha256": "6aac7d79842243f8e58a698fa01936458e0e79079fd099d3cd6e05613145f34c",
+  "core_sha256": "f941293e3a90ab7afeb39c2347325d77989fc23b649356482b461626bfb392b3",
+  "language_checkpoint_included": false,
+  "loading": "Installed qwenqpu package; torch.load(weights_only=True); no remote Python"
+}

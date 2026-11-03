@@ -1,0 +1,39 @@
+{
+  "question_sha256": "16d9f6f76af4e7cbafc461c0588ac534df1100654ad17c9f7f732eee89516218",
+  "prompt_sha256": "b870c1f32a22f6ba96d6d4282c5056304be5525046f40c112b5e2b82b50f2b17",
+  "question_count": 40,
+  "given_circuit_primary": 20,
+  "planning_auxiliary": 20,
+  "same_question_re_evaluation": true,
+  "generation": {
+    "same_checkpoint": true,
+    "do_sample": false,
+    "enable_thinking": false,
+    "total_generated_cap": 16384,
+    "context_positions": 262144,
+    "eager_prefill_chunk": 256,
+    "hidden_answer_repairs": 0
+  },
+  "shots": 4096,
+  "original_scoring": {
+    "familywise_alpha": 0.05,
+    "maximum_scalar_comparisons_both_arms": 160,
+    "absolute_probability_tolerance": 0.03270826686567064,
+    "tolerance_method": "Hoeffding union bound over <=160 scalar tests; same threshold both arms",
+    "planning_min_state_fidelity": 0.99995,
+    "core_component_error": 5e-05,
+    "core_probability_error": 5e-05,
+    "core_norm_drift": 0.0001,
+    "all_observables_must_pass": true,
+    "primary_planning_joint_correct": "legal preparation AND target fidelity threshold AND final requested probabilities pass",
+    "given_joint_correct": "final requested probabilities pass; enhanced additionally requires correct execution of provided circuit",
+    "format_and_semantic_scores_separate": true,
+    "counts_faithfulness_is_secondary": true,
+    "planning_equivalence": "full target-state fidelity up to global phase; no unique gate sequence required",
+    "planning_max_preparation_gates": 128,
+    "confidence": "Wilson 95% per rate; exact two-sided McNemar paired discordance; paired bootstrap 95% percentile CI 20000 seed 7640301; descriptive small sample"
+  },
+  "parser_defect": "Identical repeated candidate JSON is rejected as ambiguous by the frozen parser; original scores retained. See post-hoc diagnostics and limitations.",
+  "raw_private_model_logs_included": false,
+  "example_dialogues": "Only the selected sanitized GHZ16 and phase records are included."
+}

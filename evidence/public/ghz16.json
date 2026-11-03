@@ -1,0 +1,50 @@
+{
+  "case": "GHZ16",
+  "user": "Prepare a 16-qubit GHZ state from all zeros using H and a chain of CNOTs. Put the whole preparation in circuit, prefix=[], repeat=1, shots=1024.",
+  "Qwen_packet": "{\n  \"n_qubits\": 16,\n  \"prefix\": [],\n  \"circuit\": [\n    \"H 0\",\n    \"CNOT 0 1\",\n    \"CNOT 1 2\",\n    \"CNOT 2 3\",\n    \"CNOT 3 4\",\n    \"CNOT 4 5\",\n    \"CNOT 5 6\",\n    \"CNOT 6 7\",\n    \"CNOT 7 8\",\n    \"CNOT 8 9\",\n    \"CNOT 9 10\",\n    \"CNOT 10 11\",\n    \"CNOT 11 12\",\n    \"CNOT 12 13\",\n    \"CNOT 13 14\",\n    \"CNOT 14 15\"\n  ],\n  \"repeat\": 1,\n  \"shots\": 1024\n}",
+  "packet": {
+    "n_qubits": 16,
+    "prefix": [],
+    "circuit": [
+      "H 0",
+      "CNOT 0 1",
+      "CNOT 1 2",
+      "CNOT 2 3",
+      "CNOT 3 4",
+      "CNOT 4 5",
+      "CNOT 5 6",
+      "CNOT 6 7",
+      "CNOT 7 8",
+      "CNOT 8 9",
+      "CNOT 9 10",
+      "CNOT 10 11",
+      "CNOT 11 12",
+      "CNOT 12 13",
+      "CNOT 13 14",
+      "CNOT 14 15"
+    ],
+    "repeat": 1,
+    "shots": 1024
+  },
+  "visible_result": {
+    "mode": "ideal_simulated_terminal_counts",
+    "n_qubits": 16,
+    "gate_operations": 16,
+    "shots": 1024,
+    "counts": {
+      "0000000000000000": 534,
+      "1111111111111111": 490
+    },
+    "seed": 123,
+    "bit_order": "q15..q0"
+  },
+  "Qwen_counts_answer": "{\"mode\": \"ideal_simulated_terminal_counts\", \"n_qubits\": 16, \"gate_operations\": 16, \"shots\": 1024, \"counts\": {\"0000000000000000\": 534, \"1111111111111111\": 490}, \"seed\": 123, \"bit_order\": \"q15..q0\"}",
+  "planning_kind": "free_GHZ_goal",
+  "provenance": {
+    "source_results_sha256": "844d3c151577af125d0bfe691078d57f953d73a0072abd26140bc4a1af78f0a5",
+    "core_sha256": "f941293e3a90ab7afeb39c2347325d77989fc23b649356482b461626bfb392b3",
+    "source_device": "NVIDIA A100-SXM4-80GB",
+    "selected_synthetic_example": true,
+    "private_runtime_logs_included": false
+  }
+}

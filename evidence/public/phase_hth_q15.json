@@ -1,0 +1,37 @@
+{
+  "case": "phase_HTH_q15",
+  "user": "Use a 16-qubit register. prefix=[], circuit is exactly H 15 then T 15 then H 15, repeat=1, shots=4096. Leave other qubits untouched.",
+  "Qwen_packet": "{\"n_qubits\":16,\"prefix\":[],\"circuit\":[\"H 15\",\"T 15\",\"H 15\"],\"repeat\":1,\"shots\":4096}",
+  "packet": {
+    "n_qubits": 16,
+    "prefix": [],
+    "circuit": [
+      "H 15",
+      "T 15",
+      "H 15"
+    ],
+    "repeat": 1,
+    "shots": 4096
+  },
+  "visible_result": {
+    "mode": "ideal_simulated_terminal_counts",
+    "n_qubits": 16,
+    "gate_operations": 3,
+    "shots": 4096,
+    "counts": {
+      "0000000000000000": 3476,
+      "1000000000000000": 620
+    },
+    "seed": 124,
+    "bit_order": "q15..q0"
+  },
+  "Qwen_counts_answer": "{\"mode\": \"ideal_simulated_terminal_counts\", \"n_qubits\": 16, \"gate_operations\": 3, \"shots\": 4096, \"counts\": {\"0000000000000000\": 3476, \"1000000000000000\": 620}, \"seed\": 124, \"bit_order\": \"q15..q0\"}",
+  "planning_kind": "specified_gate_program_with_host_repeat_scheduling",
+  "provenance": {
+    "source_results_sha256": "844d3c151577af125d0bfe691078d57f953d73a0072abd26140bc4a1af78f0a5",
+    "core_sha256": "f941293e3a90ab7afeb39c2347325d77989fc23b649356482b461626bfb392b3",
+    "source_device": "NVIDIA A100-SXM4-80GB",
+    "selected_synthetic_example": true,
+    "private_runtime_logs_included": false
+  }
+}

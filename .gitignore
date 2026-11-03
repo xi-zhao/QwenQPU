@@ -1,0 +1,17 @@
+.reference/
+.DS_Store
+review/
+__pycache__/
+*.pyc
+.venv/
+models/
+cache/
+tmp/
+reproduced/
+dist/
+build/
+*.egg-info/
+*.safetensors
+model-*-of-*.bin
+model-*-of-*.pt
+model-*-of-*.safetensors

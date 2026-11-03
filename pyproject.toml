@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qwenqpu"
+version = "0.1.0.dev0"
+description = "Qwen with a fixed-gate ideal state-vector module and explicit host scheduling"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["torch>=2.6,<3"]
+
+[project.optional-dependencies]
+language = ["transformers==5.19.0", "accelerate", "safetensors"]
+media = ["Pillow", "numpy", "matplotlib", "cairosvg"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,91 @@
+{
+  "source_sha256": "db8b6cf9abb1e0bcc5230f8f17043949c88a75ad856e450ce4bfed91023688eb",
+  "status": "passed",
+  "reference": "Qiskit Statevector complex128, offline test process only",
+  "reference_version": "2.6.1",
+  "tested_torch": "2.6.0+cu124",
+  "thresholds": {
+    "fp32_component": 5e-05,
+    "fp32_probability": 5e-05,
+    "fp32_norm_drift": 0.0001,
+    "fp64_component": 1e-11,
+    "fp64_probability": 1e-11,
+    "fp64_norm_drift": 1e-11
+  },
+  "random_1000_gate_cases": [
+    {
+      "n_qubits": 1,
+      "dtype": "torch.float32",
+      "gate_operations": 1000,
+      "non_clifford_T_operations": 355,
+      "max_component_error": 4.267825219450572e-06,
+      "max_probability_error": 3.6182861062883376e-07,
+      "max_norm_drift": 8.993126760725723e-06
+    },
+    {
+      "n_qubits": 3,
+      "dtype": "torch.float32",
+      "gate_operations": 1000,
+      "non_clifford_T_operations": 273,
+      "max_component_error": 3.753905010506209e-06,
+      "max_probability_error": 2.61967924297668e-07,
+      "max_norm_drift": 1.1668569616318791e-05
+    },
+    {
+      "n_qubits": 8,
+      "dtype": "torch.float32",
+      "gate_operations": 1000,
+      "non_clifford_T_operations": 235,
+      "max_component_error": 9.08584684267133e-07,
+      "max_probability_error": 2.048045805169707e-08,
+      "max_norm_drift": 1.1853128084604592e-05
+    },
+    {
+      "n_qubits": 12,
+      "dtype": "torch.float32",
+      "gate_operations": 1000,
+      "non_clifford_T_operations": 272,
+      "max_component_error": 2.719188981967213e-07,
+      "max_probability_error": 2.1245187609153504e-08,
+      "max_norm_drift": 1.158499882303321e-05
+    },
+    {
+      "n_qubits": 16,
+      "dtype": "torch.float32",
+      "gate_operations": 1000,
+      "non_clifford_T_operations": 257,
+      "max_component_error": 7.905828425421035e-08,
+      "max_probability_error": 3.2278888216843993e-09,
+      "max_norm_drift": 1.1899765454459477e-05
+    },
+    {
+      "n_qubits": 16,
+      "dtype": "torch.float64",
+      "gate_operations": 1000,
+      "non_clifford_T_operations": 257,
+      "max_component_error": 2.220446049250313e-16,
+      "max_probability_error": 2.7755575615628914e-17,
+      "max_norm_drift": 4.674038933671909e-14
+    }
+  ],
+  "GHZ_widths": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "host_packet_illegal_cases": 13,
+  "boundary": "Host parses, validates, expands bounded repeats, provides uniforms and counts aggregation. CPU integer control is inside the scripted quantum graph; address/gate/state/sampling tensors run on CUDA. Quantum child is called in composite.forward, outside original Qwen decoder/KV. Reference library is imported only by this post-run offline auditor."
+}

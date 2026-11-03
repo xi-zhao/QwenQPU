@@ -1,0 +1,23 @@
+{
+  "original_artwork": true,
+  "reference_assets_copied": false,
+  "trace_sha256": "e1eda2eb32a60001f7d9b531cadd4529e15ace9cc353a662754e68bd06fb733c",
+  "renderer_sha256": "ad0a6184bd8fc8ce9460c8f480c0c3bf340a912af004e4625d5c3c6f44e84205",
+  "frames": 288,
+  "fps": 12,
+  "duration_seconds": 24,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "speed_is_illustrative": true,
+  "physical_QPU": false,
+  "new_language_inference": false,
+  "source": "Recorded Qwen GHZ16 packet, unchanged core CPU replay, historical counts reproduced",
+  "media_revision": "github-v2-concise-labels",
+  "on_screen_context": [
+    "CLASSICAL SIMULATION",
+    "DEMO REPLAY"
+  ],
+  "extended_provenance": "docs/MEDIA.md"
+}
