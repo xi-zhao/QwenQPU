@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="QwenQPU — QPU inside a language model" width="100%">
+  <img src="assets/banner-added-layers.png" alt="QwenQPU — QPU inside a language model" width="100%">
 </p>
 
 [简体中文](README.zh-CN.md) · [Standard-layer implementation](docs/ADDED_LAYERS.md) · [Benchmark](docs/BENCHMARK_ADDED_LAYERS.md) · [Hugging Face](https://huggingface.co/xi-zhao/QwenQPU)
@@ -10,6 +10,8 @@ probabilities. Qwen reads the task and supplies the circuit; the added layers
 produce the numerical answer in the model's forward pass.
 
 ## Benchmarks
+
+![Qwen vs QwenQPU](assets/benchmark-added-layers.png)
 
 Starting from the all-zero state, apply a supplied circuit and calculate two
 specified measurement-event probabilities. The new paired benchmark contains
@@ -37,6 +39,8 @@ A six-qubit GHZ circuit returns `0.5` for both all-zero and all-one outcomes.
 [Complete requests and results](evidence/added-layers/completed-demonstrations.json).
 
 ## How it works
+
+![QPU in standard Qwen layers](assets/architecture-added-layers.png)
 
 The language model and QPU share one `Qwen3_5ForCausalLM` checkpoint layout.
 Gated DeltaNet states hold amplitude digits, instructions and the program counter.

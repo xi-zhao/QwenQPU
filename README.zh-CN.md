@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="QwenQPU — QPU inside a language model" width="100%">
+  <img src="assets/banner-added-layers.png" alt="QwenQPU — QPU inside a language model" width="100%">
 </p>
 
 [English](README.md) · [新增层实现](docs/ADDED_LAYERS.md) · [评测方法](docs/BENCHMARK_ADDED_LAYERS.md) · [Hugging Face](https://huggingface.co/xi-zhao/QwenQPU)
@@ -7,6 +7,8 @@
 QwenQPU 为 Qwen3.5-4B 加入固定权重 QPU。四个标准 Qwen 层存储量子振幅，执行 H/X/T/CNOT 线路，并输出测量事件的概率。Qwen 读取题目、提交线路，新增层在模型的正向传播中给出数值答案。
 
 ## Benchmark
+
+![Qwen vs QwenQPU](assets/benchmark-added-layers.png)
 
 从全零态出发，执行题目给定的线路，计算两个指定测量事件的概率。新版对照评测包含 48 条线路，使用 3、4、6 比特，以及 12、18、24 个顺序门操作。两组使用相同语言权重，每题总预算均为 16,384 次预测，QwenQPU 的原生执行预测也计入预算。
 
@@ -23,6 +25,8 @@ QwenQPU 为 Qwen3.5-4B 加入固定权重 QPU。四个标准 Qwen 层存储量�
 这些已完成题显示，新增层提高了线路概率计算的正确率。六比特 H3–T3–H3 示例中，QwenQPU 给出 `P(q3=1) = 0.1464464664`，参考值为 `0.1464466094`；六比特 GHZ 线路的全零和全一概率均为 `0.5`。[完整请求与结果](evidence/added-layers/completed-demonstrations.json)。
 
 ## 实现
+
+![QPU in standard Qwen layers](assets/architecture-added-layers.png)
 
 语言模型与 QPU 使用同一个 `Qwen3_5ForCausalLM` checkpoint 布局。Gated DeltaNet 状态保存振幅数位、指令和程序计数器；固定 SwiGLU 权重执行小门运算和概率读出。同一套运算在不同振幅地址上复用，数值输出 token 回送到模型，完成下一状态写入。
 

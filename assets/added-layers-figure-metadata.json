@@ -1,0 +1,64 @@
+{
+  "generator": "tools/render_added_layers.py",
+  "architecture": "4 QPU + 32 language layers; stock Qwen3_5ForCausalLM forward",
+  "design_references": [
+    "https://github.com/divagr18/qwenputer/blob/main/docs/benchmarks-arith.png",
+    "https://github.com/divagr18/qwenputer/blob/main/docs/gdn-ram.png"
+  ],
+  "artifacts": {
+    "banner-added-layers": [
+      {
+        "path": "assets/banner-added-layers.svg",
+        "sha256": "17ca1f9d1000f85142987379df70309c4727270b209a821113427c145e55d3db"
+      },
+      {
+        "path": "assets/banner-added-layers.png",
+        "sha256": "6e9bc0dec5245a59bc52a6a5c018f8de0d9df4a6845c4ccea3ae4c285f3d629b"
+      },
+      {
+        "path": "assets/banner-added-layers.pdf",
+        "sha256": "78b6c41177f3cc181f60958085ab5f5086401089223e0c7dcc55a78d7be2ba00"
+      }
+    ],
+    "architecture-added-layers": [
+      {
+        "path": "assets/architecture-added-layers.svg",
+        "sha256": "88eb602a272e00190b565f96add7508b13fd4d44485828fb6d8a03fee685cea0"
+      },
+      {
+        "path": "assets/architecture-added-layers.png",
+        "sha256": "26172c629ef4fc555d2a4f6198f6248023d567410bb9e8a78c968c16d9ec69cd"
+      },
+      {
+        "path": "assets/architecture-added-layers.pdf",
+        "sha256": "e01ba78840950c678bbd7fa89d5e5414fb54c1957e4d89e7335f0e2be58b0351"
+      }
+    ],
+    "benchmark-added-layers": [
+      {
+        "path": "assets/benchmark-added-layers.svg",
+        "sha256": "96b6be06bf388975b094361c86345584f6c433347b7db0290e8a4dc8303510d3"
+      },
+      {
+        "path": "assets/benchmark-added-layers.png",
+        "sha256": "9495f89f4bb8dadb66f6725b24de6c6939cb797d1897d5e66be5a33be4ce7496"
+      },
+      {
+        "path": "assets/benchmark-added-layers.pdf",
+        "sha256": "583b53d39b4c37db3e0a3195944fdffba7948a9da22b9378ae2babe6a47b89dc"
+      }
+    ]
+  },
+  "animation_changed": false,
+  "benchmark_source": {
+    "path": "evidence/added-layers/r5-interim.json",
+    "sha256": "30c0c00eb60c9341301a10dfd2d5acdfb3704938fa29ba7867ae437208007f80",
+    "version": "r5-interim-20261104T002620Z",
+    "complete": false,
+    "paired_tasks": 27
+  },
+  "preserved_animation_sha256": {
+    "demo.gif": "0f0dae192adb5575bbab1024bc04c76629de4bd5762b2c580502822662710481",
+    "demo.mp4": "8b254d6d956528e20c968fbaf5f9056e86dd32ced5e9ef6b09ba57bbcb22a514"
+  }
+}
