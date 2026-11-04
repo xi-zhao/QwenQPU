@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "started_utc": "2026-11-04T00:39:38.785255+00:00",
+  "rows": [
+    {
+      "event": 0.0,
+      "total": 1.0,
+      "output": 0.0,
+      "reference": 0.0,
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "event": 0.125,
+      "total": 0.9999001026153564,
+      "output": 0.12501239776611328,
+      "reference": 0.125012488420641,
+      "error": 9.065452771794824e-08,
+      "passed": true
+    },
+    {
+      "event": 0.5,
+      "total": 0.9999001026153564,
+      "output": 0.5000498294830322,
+      "reference": 0.500049953682564,
+      "error": 1.2419953177023046e-07,
+      "passed": true
+    },
+    {
+      "event": 0.9999001026153564,
+      "total": 0.9999001026153564,
+      "output": 1.0,
+      "reference": 1.0,
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "event": 0.5,
+      "total": 1.0000998973846436,
+      "output": 0.49994993209838867,
+      "reference": 0.4999500562969235,
+      "error": 1.241985348454655e-07,
+      "passed": true
+    },
+    {
+      "event": 1.0000998973846436,
+      "total": 1.0000998973846436,
+      "output": 1.0,
+      "reference": 1.0,
+      "error": 0.0,
+      "passed": true
+    }
+  ],
+  "patch": {
+    "version": "native-near-unit-normalizer-r1",
+    "coordinates": [
+      770,
+      771,
+      772,
+      773,
+      774,
+      775
+    ],
+    "guard_abs_total_minus_one": 0.0005,
+    "formula": "event_mass * (2 - total_mass)",
+    "mathematical_ratio_approximation_bound": 2.5e-07,
+    "new_units": [
+      {
+        "layer": 0,
+        "row": 33,
+        "output": 776
+      },
+      {
+        "layer": 0,
+        "row": 34,
+        "output": 777
+      },
+      {
+        "layer": 1,
+        "row": 8580,
+        "output": 778
+      },
+      {
+        "layer": 1,
+        "row": 8581,
+        "output": 778
+      },
+      {
+        "layer": 2,
+        "row": 9,
+        "output": 745
+      },
+      {
+        "layer": 2,
+        "row": 10,
+        "output": 745
+      }
+    ],
+    "source_sha256": "0cc062c136f565cbaa784395b73162fe2852178dbbf1755545df32129c36b858",
+    "custom_model_forward": false
+  },
+  "gate_trace_unchanged": true,
+  "gate_state_unchanged": true,
+  "phase": {
+    "probability": 0.14644622802734375,
+    "numeric_digits": [
+      1173,
+      3936
+    ],
+    "raw_event_probability": 0.14644622802734375,
+    "raw_total_probability": 0.9999995231628418,
+    "reference": 0.1464466094067262,
+    "error": 3.8137938246363134e-07,
+    "state_unchanged": true
+  },
+  "ended_utc": "2026-11-04T00:41:16.895011+00:00",
+  "scope": "Publication packaging check on CPU; one-qubit actual stock-model readout, not a rerun of the A100 benchmark"
+}

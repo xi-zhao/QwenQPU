@@ -1,94 +1,92 @@
 <p align="center">
-  <img src="assets/banner.png" alt="QwenQPU: quantum circuits and measurement probabilities." width="100%">
+  <img src="assets/banner.png" alt="QwenQPU — QPU inside a language model" width="100%">
 </p>
 
-QwenQPU weights: [Hugging Face](https://huggingface.co/xi-zhao/QwenQPU)  
-Language checkpoint: [Hugging Face](https://huggingface.co/divagr1925/Qwen3.5-4B-Qwenputer)  
-[简体中文](README.zh-CN.md) · [Architecture](docs/ARCHITECTURE.md) · [Evaluation method](docs/BENCHMARK.md)
+[简体中文](README.zh-CN.md) · [Standard-layer implementation](docs/ADDED_LAYERS.md) · [Benchmark](docs/BENCHMARK_ADDED_LAYERS.md) · [Hugging Face](https://huggingface.co/xi-zhao/QwenQPU)
 
-QwenQPU integrates a fixed-weight QPU module with Qwen3.5-4B. Quantum gates are
-encoded as neural-network weights, and the module executes circuits in its
-forward pass. Qwen generates the circuit and answers from the returned
-measurement counts.
-
-<p align="center"><img src="assets/demo.gif" alt="Qwen, QwenQPU and Qiskit results for a 16-qubit, 161-gate calculation." width="100%"></p>
-
-*Calculate `P(q14=1)` and `P(q14 xor q8 xor q10 xor q7=1)` after a 16-qubit,
-161-gate circuit. [MP4](assets/demo.mp4) · [Full circuit and answers](docs/BENCHMARK.md#worked-example-c16-4).*
+QwenQPU adds a fixed-weight QPU to Qwen3.5-4B. Four standard Qwen layers store
+quantum amplitudes, execute H/X/T/CNOT circuits and return measurement-event
+probabilities. Qwen reads the task and supplies the circuit; the added layers
+produce the numerical answer in the model's forward pass.
 
 ## Benchmarks
 
-The calculation tasks start from `|0...0>`, apply a supplied H/X/T/CNOT circuit,
-and calculate one or two specified parity-event probabilities. The 20 calculation
-tasks use register sizes 1, 3, 8, 12 and 16, with four tasks at each size and
-5–161 sequential gate operations. Another 20 tasks ask for a circuit that prepares
-a specified product, phase-pair, controlled-S or graph state, followed by its
-requested measurement probabilities.
+Starting from the all-zero state, apply a supplied circuit and calculate two
+specified measurement-event probabilities. The new paired benchmark contains
+48 circuits on 3, 4 and 6 qubits, with 12, 18 or 24 sequential gates. Both
+conditions use the same language weights and a 16,384-prediction total budget;
+QwenQPU's native execution predictions count toward that budget.
 
-Both conditions use the same language weights and greedy decoding. Each has a
-total generation budget of 16,384 tokens across its calls. QwenQPU executes
-the circuit and passes its 4,096-shot event counts to Qwen.
+**Interim results: 27 of 48 paired tasks completed at 00:26 UTC, November 4.**
 
-| Task and answer scoring | Qwen | **QwenQPU** |
+| Calculation tasks | Qwen | QwenQPU |
 |---|---:|---:|
-| Calculation: identical repeated JSON merged (20 tasks) | 8/20 | **19/20** |
-| Calculation: original answer parser (20 tasks) | 1/20 | **19/20** |
-| Planning: joint circuit-and-answer success (20 tasks) | 1/20 | 1/20 |
+| Non-Clifford circuits (20 completed) | 1/20 | **20/20** |
+| Clifford controls (7 completed) | 0/7 | **7/7** |
+| All completed pairs (27) | 1/27 | **27/27** |
 
-With identical repeated answers merged, calculation success rises from 8/20 to
-19/20: 12 QwenQPU-only successes, 1 Qwen-only success,
-and 7 shared successes. The paired gain is 55 percentage points (bootstrap 95%
-interval 30–80). The calculation score improves with the execution module;
-the planning score stays at 1/20 in both conditions.
+Both requested probabilities must agree with independent Qiskit values within
+`5e-5`. QwenQPU must also preserve the requested circuit and measurement events.
+Its maximum probability error in these completed pairs is `1.326e-5`.
+The run is continuing. [Tasks, protocol and interim data](docs/BENCHMARK_ADDED_LAYERS.md).
 
-For the 16-qubit example above, Qwen answers `0.5, 0.5`; QwenQPU answers
-`1, 0.4931640625`; Qiskit's reference is `1, 0.5`. QwenQPU's second result is
-`2020/4096` from the measurement counts.
+The completed pairs show that the added layers improve circuit-probability
+calculation. For a six-qubit H3–T3–H3 example, QwenQPU returns
+`P(q3=1) = 0.1464464664`; the reference is `0.1464466094`.
+A six-qubit GHZ circuit returns `0.5` for both all-zero and all-one outcomes.
+[Complete requests and results](evidence/added-layers/completed-demonstrations.json).
 
-[Evaluation method, complete task list and worked examples](docs/BENCHMARK.md).
+## How it works
 
-H, X and T are fixed real matrices acting on pairs of complex amplitudes.
-CNOT applies X through a control mask. The same small gate network updates
-different positions in the state vector, one instruction at a time.
-`QwenQPU.forward` calls the quantum module for state evolution and terminal
-sampling. The host parses circuit instructions, supplies random numbers,
-collects counts and schedules language generation.
+The language model and QPU share one `Qwen3_5ForCausalLM` checkpoint layout.
+Gated DeltaNet states hold amplitude digits, instructions and the program counter.
+Fixed SwiGLU weights perform the small-gate arithmetic and probability readout.
+The same arithmetic is reused at different amplitude addresses. Numerical output
+tokens feed back into the model to write the next state.
+
+The host parses the request, loads instructions, schedules measurement queries
+and decodes output digits. The model computes state updates and probabilities.
+The assembled model retains 32 language layers, replaces the inherited CPU
+prefix with four QPU layers, and uses the stock Transformers forward method.
+[Implementation and completed tests](docs/ADDED_LAYERS.md).
 
 ## Quickstart
 
-With Python and PyTorch installed:
-
 ```bash
 git clone https://github.com/xi-zhao/QwenQPU && cd QwenQPU
-python examples/reproduce_benchmark_case.py --case C16-4
+python research/standard_layers/build_prefix.py --out ./models/qpu-prefix
+python research/standard_layers/demo_repaired_full_model.py \
+  --base ./models/Qwen3.5-4B-Qwenputer \
+  --prefix ./models/qpu-prefix \
+  --out ./reproduced/added-layer-demo
 ```
 
-This runs the circuit shown above and reports its event counts and probabilities.
-To download the weights and run a Qwen-to-QPU dialogue:
+Use the existing local language checkpoint and the dependencies in the
+[setup instructions](docs/ADDED_LAYERS.md#build-and-run). The prefix constructor
+writes about 1.42 GB of fixed weights. Full assembly uses 36.67 GB of FP32 weights.
+The new complete serialized checkpoint is pending; the current HF root still
+contains the earlier composite release. [Weight manifest](evidence/added-layers/weight-manifest.json).
 
-```bash
-hf download xi-zhao/QwenQPU --local-dir ./QwenQPU-weights
-python QwenQPU-weights/install_qwenqpu.py
-python QwenQPU-weights/QwenQPU-runtime/examples/qwen_local.py \
-  --model-path ./QwenQPU-weights --max-generated-tokens 16384 \
-  --output ./review/dialogue.json
-```
+## Earlier composite version
 
-[Setup and usage](docs/REPRODUCING.md) · [Architecture](docs/ARCHITECTURE.md) ·
-[Evaluation](docs/BENCHMARK.md) · [Media source](tools/render_assets.py) ·
-[Attribution and terms](docs/LICENSES.md)
+<p align="center"><img src="assets/demo.gif" alt="Earlier composite version: a 16-qubit circuit calculation." width="100%"></p>
+
+The earlier version uses a fixed small-gate network called by a composite
+forward. Its 16-qubit example computes two event probabilities after 161 gates.
+[Video](assets/demo.mp4) · [Earlier benchmark and worked example](docs/BENCHMARK.md) ·
+[Composite runtime](docs/ARCHITECTURE.md).
 
 ## Citing
 
 ```bibtex
 @software{qwenqpu2026,
   author = {xi-zhao},
-  title  = {{QwenQPU}: Qwen with a fixed quantum state-vector network},
+  title  = {{QwenQPU}: QPU inside a language model},
   year   = {2026},
   url    = {https://github.com/xi-zhao/QwenQPU}
 }
 ```
 
-The language checkpoint comes from [Qwenputer](https://github.com/divagr18/qwenputer).
-That project also informed the fixed-computation approach.
-Component terms are in [LICENSES.md](docs/LICENSES.md).
+The inherited language checkpoint and standard-layer construction approach come
+from [Qwenputer](https://github.com/divagr18/qwenputer).
+[Attribution and component terms](docs/LICENSES.md).

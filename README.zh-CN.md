@@ -1,86 +1,63 @@
 <p align="center">
-  <img src="assets/banner.png" alt="QwenQPU：量子线路与测量概率" width="100%">
+  <img src="assets/banner.png" alt="QwenQPU — QPU inside a language model" width="100%">
 </p>
 
-QwenQPU 权重：[Hugging Face](https://huggingface.co/xi-zhao/QwenQPU)  
-语言权重：[Hugging Face](https://huggingface.co/divagr1925/Qwen3.5-4B-Qwenputer)  
-[English](README.md) · [架构](docs/ARCHITECTURE.md) · [评测方法](docs/BENCHMARK.md)
+[English](README.md) · [新增层实现](docs/ADDED_LAYERS.md) · [评测方法](docs/BENCHMARK_ADDED_LAYERS.md) · [Hugging Face](https://huggingface.co/xi-zhao/QwenQPU)
 
-QwenQPU 为 Qwen3.5-4B 集成了一个固定权重的 QPU 模块。
-量子门运算写成神经网络权重，在模块的正向传播中执行线路。
-Qwen 生成线路，并根据返回的测量计数回答。
+QwenQPU 为 Qwen3.5-4B 加入固定权重 QPU。四个标准 Qwen 层存储量子振幅，执行 H/X/T/CNOT 线路，并输出测量事件的概率。Qwen 读取题目、提交线路，新增层在模型的正向传播中给出数值答案。
 
-<p align="center"><img src="assets/demo.gif" alt="16比特161门线路上Qwen、QwenQPU与Qiskit的结果对照" width="100%"></p>
+## Benchmark
 
-*给定一条16比特、161个门的线路，计算 `P(q14=1)` 和
-`P(q14 xor q8 xor q10 xor q7=1)`。[MP4](assets/demo.mp4) ·
-[完整线路与回答](docs/BENCHMARK.md#worked-example-c16-4)。*
+从全零态出发，执行题目给定的线路，计算两个指定测量事件的概率。新版对照评测包含 48 条线路，使用 3、4、6 比特，以及 12、18、24 个顺序门操作。两组使用相同语言权重，每题总预算均为 16,384 次预测，QwenQPU 的原生执行预测也计入预算。
 
-## 基准测试
+**中途结果：截至 11 月 4 日 00:26 UTC，完成 48 题中的 27 对。**
 
-计算题从 `|0...0>` 出发，执行给定的 H/X/T/CNOT 线路，计算一至两个
-指定奇偶事件的概率。20道计算题使用1、3、8、12、16比特寄存器，每种规模4题，
-包含5–161个顺序门操作。另有20道规划题：构造指定的乘积态、带相位的两分量态、
-controlled-S 态或图态，并给出要求的测量概率。
-
-两组使用同一语言权重和贪心解码，每题每组跨调用累计生成预算为16384个 token。
-QwenQPU 执行线路，并向 Qwen 提供4096次测量的事件计数。
-
-|任务与答案评分方式|Qwen|**QwenQPU**|
+| 计算任务 | Qwen | QwenQPU |
 |---|---:|---:|
-|计算题：相同重复 JSON 合并评分（20题）|8/20|**19/20**|
-|计算题：原答案解析评分（20题）|1/20|**19/20**|
-|规划题：线路与答案联合成功（20题）|1/20|1/20|
+| 非 Clifford 线路（已完成 20 题） | 1/20 | **20/20** |
+| Clifford 对照（已完成 7 题） | 0/7 | **7/7** |
+| 已完成配对合计（27 题） | 1/27 | **27/27** |
 
-合并相同重复答案后，计算题成功数从8/20提高到19/20：
-12题仅 QwenQPU 正确，1题仅 Qwen 正确，7题双方均正确。配对提升为55个百分点，
-bootstrap 95%区间为30–80个百分点。加入执行模块后，计算题成功率提高，
-规划题仍为两组各1/20。
+两个概率都须与独立 Qiskit 参考值相差不超过 `5e-5`。QwenQPU 提交的线路和测量事件也须与题目一致。上述已完成题中，QwenQPU 的最大概率误差为 `1.326e-5`。评测仍在运行。[题目、协议与中途数据](docs/BENCHMARK_ADDED_LAYERS.md)。
 
-上面的16比特例题中，Qwen 回答 `0.5、0.5`，QwenQPU 回答 `1、0.4931640625`，
-Qiskit 参考值为 `1、0.5`。QwenQPU 的第二个概率来自测量计数 `2020/4096`。
+这些已完成题显示，新增层提高了线路概率计算的正确率。六比特 H3–T3–H3 示例中，QwenQPU 给出 `P(q3=1) = 0.1464464664`，参考值为 `0.1464466094`；六比特 GHZ 线路的全零和全一概率均为 `0.5`。[完整请求与结果](evidence/added-layers/completed-demonstrations.json)。
 
-[评测方法、完整题集与例题](docs/BENCHMARK.md)。
+## 实现
 
-H、X 和 T 使用固定实矩阵，作用于成对的复振幅；CNOT 通过控制掩码执行 X。
-同一个小门网络作用于态向量的不同位置，逐条执行指令。
-`QwenQPU.forward` 调用量子模块完成态演化和末端采样。
-宿主解析线路、提供随机数、汇总 counts，并调度语言生成。
+语言模型与 QPU 使用同一个 `Qwen3_5ForCausalLM` checkpoint 布局。Gated DeltaNet 状态保存振幅数位、指令和程序计数器；固定 SwiGLU 权重执行小门运算和概率读出。同一套运算在不同振幅地址上复用，数值输出 token 回送到模型，完成下一状态写入。
 
-## 快速开始
+宿主解析请求、加载指令、调度测量查询并解码输出数位。态更新与概率计算由模型完成。组装后的模型保留 32 个语言层，以四个 QPU 层替换继承的 CPU 前缀，使用标准 Transformers forward。[实现及已完成测试](docs/ADDED_LAYERS.md)。
 
-已有 Python 和 PyTorch 时：
+## 运行
 
 ```bash
 git clone https://github.com/xi-zhao/QwenQPU && cd QwenQPU
-python examples/reproduce_benchmark_case.py --case C16-4
+python research/standard_layers/build_prefix.py --out ./models/qpu-prefix
+python research/standard_layers/demo_repaired_full_model.py \
+  --base ./models/Qwen3.5-4B-Qwenputer \
+  --prefix ./models/qpu-prefix \
+  --out ./reproduced/added-layer-demo
 ```
 
-该命令执行上面的线路，输出事件计数与概率。
-下载权重后，可运行 Qwen 与量子模块的对话：
+使用已有本地语言 checkpoint，依赖见[运行说明](docs/ADDED_LAYERS.md#build-and-run)。构造器生成约 1.42 GB 固定权重；完整组装模型使用约 36.67 GB FP32 权重。新版完整序列化 checkpoint 尚待发布，HF 根目录目前仍是此前组合版。[权重清单](evidence/added-layers/weight-manifest.json)。
 
-```bash
-hf download xi-zhao/QwenQPU --local-dir ./QwenQPU-weights
-python QwenQPU-weights/install_qwenqpu.py
-python QwenQPU-weights/QwenQPU-runtime/examples/qwen_local.py \
-  --model-path ./QwenQPU-weights --max-generated-tokens 16384 \
-  --output ./review/dialogue.json
-```
+## 此前组合版
 
-[环境与用法](docs/REPRODUCING.md) · [架构](docs/ARCHITECTURE.md) ·
-[评测](docs/BENCHMARK.md) · [媒体源码](tools/render_assets.py) ·
-[来源与许可](docs/LICENSES.md)
+<p align="center"><img src="assets/demo.gif" alt="此前组合版：16 比特线路计算。" width="100%"></p>
+
+此前版本在复合 forward 中调用固定小门网络。视频展示执行 16 比特、161 个门的线路后，计算两个测量事件的概率。
+[视频](assets/demo.mp4) · [此前评测与完整例题](docs/BENCHMARK.md) · [组合版运行机制](docs/ARCHITECTURE.md)。
 
 ## 引用
 
 ```bibtex
 @software{qwenqpu2026,
   author = {xi-zhao},
-  title  = {{QwenQPU}: Qwen with a fixed quantum state-vector network},
+  title  = {{QwenQPU}: QPU inside a language model},
   year   = {2026},
   url    = {https://github.com/xi-zhao/QwenQPU}
 }
 ```
 
-语言权重来自 [Qwenputer](https://github.com/divagr18/qwenputer)，固定计算模块的思路也参考了该项目。
-组件条款见[许可说明](docs/LICENSES.md)。
+继承的语言 checkpoint 和标准层构造思路来自 [Qwenputer](https://github.com/divagr18/qwenputer)。
+[来源与各组件条款](docs/LICENSES.md)。

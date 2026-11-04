@@ -1,0 +1,44 @@
+{
+  "version": "r5-interim-20261104T002620Z",
+  "snapshot_utc": "2026-11-04T00:26:20.385038+00:00",
+  "status": "incomplete",
+  "scheduled_tasks": 48,
+  "scheduled_conditions": 96,
+  "paired_tasks_scored": 27,
+  "terminal_conditions_scored": 54,
+  "scoring": "Both event probabilities within absolute 5e-5 of independent Qiskit complex128; QPU request must preserve events and final state on the given input. No task failure excluded.",
+  "rows": [
+    {
+      "family": "nonclifford",
+      "n": 20,
+      "qwen_correct": 1,
+      "qwenqpu_correct": 20
+    },
+    {
+      "family": "clifford",
+      "n": 7,
+      "qwen_correct": 0,
+      "qwenqpu_correct": 7
+    },
+    {
+      "family": "all",
+      "n": 27,
+      "qwen_correct": 1,
+      "qwenqpu_correct": 27
+    }
+  ],
+  "paired": {
+    "both_correct": 1,
+    "qwenqpu_only": 26,
+    "qwen_only": 0,
+    "both_wrong": 0
+  },
+  "plain_failures": {
+    "wrong_probability": 25,
+    "conflicting_answers": 1
+  },
+  "qwenqpu_max_absolute_probability_error": 1.3255982656223964e-05,
+  "task_sha256": "b6d892f5441f7b66fcc63d3c4a194188b5b84c410376225ae9d779feb01d0759",
+  "formal_freeze_sha256": "37f03134726b33a8c78785dfd1f4e41a067e71560fcc3c70f36ef624f3f00421",
+  "verification": "Read-only independent scoring at the snapshot; all 27 frozen file hashes checked and completed source record hashes unchanged before/after scoring."
+}

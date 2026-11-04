@@ -1,0 +1,76 @@
+{
+  "format": "QwenQPU-added-layers-release-manifest-v1",
+  "base": {
+    "repository": "divagr1925/Qwen3.5-4B-Qwenputer",
+    "revision": "2d9068508f2b680badb7abcded96fdd107e9ba5d",
+    "shards": 8,
+    "bytes": 18715279016,
+    "license": "Apache-2.0"
+  },
+  "prefix": {
+    "layers": 4,
+    "dtype": "float32",
+    "capacity_qubits": 6,
+    "files": [
+      {
+        "name": "model-00001-of-00002.safetensors",
+        "bytes": 985465312,
+        "sha256": "d92ff7c27df6b4f0c3eb97821652a77fb38be34b72b272ee0d8e53bf363f6178"
+      },
+      {
+        "name": "model-00002-of-00002.safetensors",
+        "bytes": 437023752,
+        "sha256": "03a3c8ce85ba089a4ea17aa88b8324e911d67a2c0801cc83e530071493d27730"
+      }
+    ],
+    "distribution_status": "Verified checkpoint exists on execution host; not included in this source release"
+  },
+  "assembled_model": {
+    "class": "transformers.Qwen3_5ForCausalLM",
+    "language_layers": 32,
+    "quantum_layers": 4,
+    "removed_cpu_layers": 11,
+    "parameters": 9167926528,
+    "weight_bytes_float32": 36671706112,
+    "mapped_tensors": 483,
+    "custom_forward": false,
+    "serialization_status": "Assembled and executed in memory; a complete serialized checkpoint has not been produced or round-trip validated"
+  },
+  "hf_existing_revision": "78dfa7bcc58f6a66da3ba78a5b86aa5eb917aadf",
+  "source_sha256": {
+    "token_checkpoint.py": "3ed325c16f1e83425ee9bc5cb739ab19bd4e78da1f3478d89e009dbec37a6354",
+    "compact_checkpoint.py": "c36625f6a33c2508a396f4ab847e44df509709196a6288887e58f3159644bd82",
+    "merge_language_checkpoint.py": "56e7599fe4d3c427cd9d02effc5eb49fca8ce8ee2fc1421b7602dfde4f373477",
+    "task_interface.py": "11f0f766f03240ae90ddfa0a75cd80cd3b2cef302f34c9ef52465c783f345d91",
+    "benchmark_io.py": "0f1e4104f9369f225bb4663003bba28aa6f76b195ef06008390b1f8ece0fe11a",
+    "demo_repaired_full_model.py": "94c6a2e11098d292a7d82e06899222e109a32b7b8a56e8aa94148af8c68ba912",
+    "experiments/compact_identity_patch.py": "45e04692594d95a72f2bcb65c9348944f25bcab1db2d1fed41777132db5c7358",
+    "experiments/compact_normalized_readout.py": "0cc062c136f565cbaa784395b73162fe2852178dbbf1755545df32129c36b858",
+    "experiments/compact_sampling_digits.py": "d7a01214fa4d6df8c8e58c48e3a1a5603436c6d41603c3c4dc728f9056971e6b",
+    "experiments/compact_sampling_rejection.py": "271d87e0324d4ec1f91e45e70eaa9c9fd2417756ba61cd647ce278b76e9f5d16",
+    "experiments/test_normalized_readout.py": "c0604dca89a61093756841776289f6c8f681a5fdcf99b48408318a018be81c2e",
+    "upstream/LICENSE.qwenputer": "857d2d711adf29ba7be3a49fece1031ff7397acb38b659094716b53cf57b3337"
+  },
+  "release_source_sha256": {
+    "research/standard_layers/demo_repaired_full_model.py": "94c6a2e11098d292a7d82e06899222e109a32b7b8a56e8aa94148af8c68ba912",
+    "research/standard_layers/compact_checkpoint.py": "c36625f6a33c2508a396f4ab847e44df509709196a6288887e58f3159644bd82",
+    "research/standard_layers/benchmark_io.py": "0f1e4104f9369f225bb4663003bba28aa6f76b195ef06008390b1f8ece0fe11a",
+    "research/standard_layers/build_prefix.py": "1c49c111b9ae2c88595aa22f2bb72047a1a9bc21ae54c87df522b0b86c7335f0",
+    "research/standard_layers/task_interface.py": "11f0f766f03240ae90ddfa0a75cd80cd3b2cef302f34c9ef52465c783f345d91",
+    "research/standard_layers/token_checkpoint.py": "3ed325c16f1e83425ee9bc5cb739ab19bd4e78da1f3478d89e009dbec37a6354",
+    "research/standard_layers/merge_language_checkpoint.py": "56e7599fe4d3c427cd9d02effc5eb49fca8ce8ee2fc1421b7602dfde4f373477",
+    "research/standard_layers/experiments/compact_sampling_digits.py": "d7a01214fa4d6df8c8e58c48e3a1a5603436c6d41603c3c4dc728f9056971e6b",
+    "research/standard_layers/experiments/compact_sampling_rejection.py": "271d87e0324d4ec1f91e45e70eaa9c9fd2417756ba61cd647ce278b76e9f5d16",
+    "research/standard_layers/experiments/test_normalized_readout.py": "c0604dca89a61093756841776289f6c8f681a5fdcf99b48408318a018be81c2e",
+    "research/standard_layers/experiments/compact_normalized_readout.py": "0cc062c136f565cbaa784395b73162fe2852178dbbf1755545df32129c36b858",
+    "research/standard_layers/experiments/compact_identity_patch.py": "45e04692594d95a72f2bcb65c9348944f25bcab1db2d1fed41777132db5c7358",
+    "research/standard_layers/benchmark_native_r5/answer_parser.py": "a53c304cf57dff81a010888b37d945fa355f1553f2b48652ab99928a7dd05da6",
+    "research/standard_layers/benchmark_native_r5/test_answer_parser.py": "3c0a486c6befb562c867503a44942e83260670b953c932a231ac3e5a89cc71f5",
+    "research/standard_layers/benchmark_native_r5/common.py": "5b2fb31a855e99f271a0c376d0b3d56e5449a36a4717e0f33939add9256c030f",
+    "research/standard_layers/benchmark_native_r5/test_glue.py": "de5dca12a1e8572cf8d974aabdc6eeebb66b79df91abad4a81f0d1ab353a3247",
+    "research/standard_layers/benchmark_native_r5/tool_interface.py": "0b9b8cce0a2ca301401451429ead06c6db8bba5ef78b1ddbbd1fe6831fa3fd59",
+    "research/standard_layers/benchmark_native_r5/test_interface.py": "1e8f9bb036aed740c201816e1a60cd027fd065a088a866814e27109aad98a686",
+    "research/standard_layers/benchmark_native_r5/score.py": "494f468ce641e16d2a5401d1d40f228f731b359c51719d53350a12905e500008",
+    "research/standard_layers/upstream/LICENSE.qwenputer": "857d2d711adf29ba7be3a49fece1031ff7397acb38b659094716b53cf57b3337"
+  }
+}

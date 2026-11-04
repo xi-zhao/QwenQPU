@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "capacity": 1,
+  "scope": "New public constructor combined patches and checkpoint reload on CPU",
+  "probability": 0.14644670486450195,
+  "absolute_error": 9.545777573949366e-08,
+  "seconds": 31.215761166997254,
+  "class": "Qwen3_5ForCausalLM",
+  "weights_sha256": "435ac9a24cd28ff4f5207129f6310273348893b2f798f1cc796c6b1b2b533f7b"
+}
