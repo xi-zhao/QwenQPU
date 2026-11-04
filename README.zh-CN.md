@@ -45,12 +45,12 @@ python research/standard_layers/demo_repaired_full_model.py \
 
 使用已有本地语言 checkpoint，依赖见[运行说明](docs/ADDED_LAYERS.md#build-and-run)。构造器生成约 1.42 GB 固定权重；完整组装模型使用约 36.67 GB FP32 权重。[权重清单](evidence/added-layers/weight-manifest.json)。
 
-## 此前组合版
+## 线路示例
 
-<p align="center"><img src="assets/demo.gif" alt="此前组合版：16 比特线路计算。" width="100%"></p>
+<p align="center"><img src="assets/demo.gif" alt="16 比特线路计算。" width="100%"></p>
 
-此前版本在复合 forward 中调用固定小门网络。视频展示执行 16 比特、161 个门的线路后，计算两个测量事件的概率。
-[视频](assets/demo.mp4) · [此前评测与完整例题](docs/BENCHMARK.md) · [组合版运行机制](docs/ARCHITECTURE.md)。
+视频展示执行 16 比特、161 个门的线路后，计算两个测量事件的概率。
+[视频](assets/demo.mp4) · [评测与完整例题](docs/BENCHMARK.md) · [运行机制](docs/ARCHITECTURE.md)。
 
 ## 引用
 

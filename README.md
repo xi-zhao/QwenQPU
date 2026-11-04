@@ -70,14 +70,13 @@ Use the existing local language checkpoint and the dependencies in the
 writes about 1.42 GB of fixed weights. Full assembly uses 36.67 GB of FP32 weights.
 [Weight manifest](evidence/added-layers/weight-manifest.json).
 
-## Earlier composite version
+## Circuit example
 
-<p align="center"><img src="assets/demo.gif" alt="Earlier composite version: a 16-qubit circuit calculation." width="100%"></p>
+<p align="center"><img src="assets/demo.gif" alt="A 16-qubit circuit calculation." width="100%"></p>
 
-The earlier version uses a fixed small-gate network called by a composite
-forward. Its 16-qubit example computes two event probabilities after 161 gates.
-[Video](assets/demo.mp4) · [Earlier benchmark and worked example](docs/BENCHMARK.md) ·
-[Composite runtime](docs/ARCHITECTURE.md).
+The 16-qubit example computes two event probabilities after 161 gates.
+[Video](assets/demo.mp4) · [Benchmark and worked example](docs/BENCHMARK.md) ·
+[Runtime](docs/ARCHITECTURE.md).
 
 ## Citing
 
