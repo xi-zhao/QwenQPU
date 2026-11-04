@@ -1,0 +1,1824 @@
+{
+  "protocol": "native-added-layers-computation-r5-formal",
+  "complete": true,
+  "rows": [
+    {
+      "id": "nonclifford-q4-g24-s4",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 8.881784197001252e-16,
+        "B": 0.17677669529663698
+      },
+      "seconds": 605.0303623119835,
+      "language_tokens": 12510,
+      "native_predictions": 0,
+      "total_predictions": 12510,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q4-g24-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 8.881784197001252e-16,
+        "B": 1.9068969113467116e-07
+      },
+      "seconds": 697.9193270700052,
+      "language_tokens": 197,
+      "native_predictions": 14399,
+      "total_predictions": 14596,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q6-g24-s2",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 7.771561172376096e-16,
+        "B": 0.176776695296637
+      },
+      "seconds": 290.67588362586685,
+      "language_tokens": 6450,
+      "native_predictions": 0,
+      "total_predictions": 6450,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q6-g24-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.384185798787186e-07,
+        "B": 2.8614746708233163e-07
+      },
+      "seconds": 695.6396451781038,
+      "language_tokens": 206,
+      "native_predictions": 14399,
+      "total_predictions": 14605,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q3-g12-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.1455270000000003,
+        "B": 0.353553695296637
+      },
+      "seconds": 628.8324804829899,
+      "language_tokens": 13205,
+      "native_predictions": 0,
+      "total_predictions": 13205,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q3-g12-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.384185794346294e-07,
+        "B": 4.772888793913577e-08
+      },
+      "seconds": 372.91985887801275,
+      "language_tokens": 137,
+      "native_predictions": 8231,
+      "total_predictions": 8368,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q6-g18-s4",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.35355339059327273,
+        "B": 0.25000000000000033
+      },
+      "seconds": 586.6327927259263,
+      "language_tokens": 12187,
+      "native_predictions": 0,
+      "total_predictions": 12187,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q6-g18-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 6.197979626199057e-07,
+        "B": 3.0531133177191805e-16
+      },
+      "seconds": 530.7492799498141,
+      "language_tokens": 167,
+      "native_predictions": 11315,
+      "total_predictions": 11482,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g24-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.3535533905932715,
+        "B": 0.17677669529663576
+      },
+      "seconds": 1.3400366338901222,
+      "language_tokens": 18,
+      "native_predictions": 0,
+      "total_predictions": 18,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q4-g24-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 1.3255982656223964e-05,
+        "B": 6.866409907213544e-06
+      },
+      "seconds": 694.2094820879865,
+      "language_tokens": 194,
+      "native_predictions": 14399,
+      "total_predictions": 14593,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q4-g18-s4",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.603553390593274,
+        "B": 0.12499999999999961
+      },
+      "seconds": 1.7615577410906553,
+      "language_tokens": 20,
+      "native_predictions": 0,
+      "total_predictions": 20,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g18-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 3.8137938224158674e-07,
+        "B": 2.3841857871298444e-07
+      },
+      "seconds": 524.3961196979508,
+      "language_tokens": 164,
+      "native_predictions": 11315,
+      "total_predictions": 11479,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q6-g18-s2",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 5.551115123125783e-16,
+        "B": 0.2500000000000003
+      },
+      "seconds": 383.94688396085985,
+      "language_tokens": 8463,
+      "native_predictions": 0,
+      "total_predictions": 8463,
+      "family": "clifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q6-g18-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 5.551115123125783e-16,
+        "B": 2.3841857882400674e-07
+      },
+      "seconds": 524.1244361079298,
+      "language_tokens": 176,
+      "native_predictions": 11315,
+      "total_predictions": 11491,
+      "family": "clifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q3-g24-s2",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.5000000000000009,
+        "B": 0.073223304703363
+      },
+      "seconds": 1.8700290881097317,
+      "language_tokens": 27,
+      "native_predictions": 0,
+      "total_predictions": 27,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q3-g24-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 9.43689570931383e-16,
+        "B": 2.8614746708233163e-07
+      },
+      "seconds": 696.7410489979666,
+      "language_tokens": 200,
+      "native_predictions": 14399,
+      "total_predictions": 14599,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q6-g12-s2",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 3.885780586188048e-16,
+        "B": 0.07322330470336307
+      },
+      "seconds": 2.292572934180498,
+      "language_tokens": 33,
+      "native_predictions": 0,
+      "total_predictions": 33,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q6-g12-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.3841857871298444e-07,
+        "B": 4.772888791138019e-08
+      },
+      "seconds": 377.35784881119616,
+      "language_tokens": 137,
+      "native_predictions": 8231,
+      "total_predictions": 8368,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q4-g18-s1",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 7.771561172376096e-16,
+        "B": 0.42677669529663625
+      },
+      "seconds": 1.3914176600519568,
+      "language_tokens": 17,
+      "native_predictions": 0,
+      "total_predictions": 17,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g18-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.384185798787186e-07,
+        "B": 2.861474663329311e-07
+      },
+      "seconds": 526.6645993110724,
+      "language_tokens": 167,
+      "native_predictions": 11315,
+      "total_predictions": 11482,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q6-g18-s2",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.5000000000000004,
+        "B": 0.07322330470336302
+      },
+      "seconds": 1.3045573660638183,
+      "language_tokens": 17,
+      "native_predictions": 0,
+      "total_predictions": 17,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q6-g18-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.3841857960116286e-07,
+        "B": 2.8614746705457605e-07
+      },
+      "seconds": 524.3450377818663,
+      "language_tokens": 170,
+      "native_predictions": 11315,
+      "total_predictions": 11485,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q6-g18-s1",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.08394660940672599,
+        "B": 0.2705266952966361
+      },
+      "seconds": 1.62746143899858,
+      "language_tokens": 24,
+      "native_predictions": 0,
+      "total_predictions": 24,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q6-g18-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 3.3387635506310076e-07,
+        "B": 4.7728887064835135e-08
+      },
+      "seconds": 519.771992062917,
+      "language_tokens": 167,
+      "native_predictions": 11315,
+      "total_predictions": 11482,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q6-g18-s4",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.3124999999999993,
+        "B": 0.06249999999999964
+      },
+      "seconds": 1.5735852560028434,
+      "language_tokens": 23,
+      "native_predictions": 0,
+      "total_predictions": 23,
+      "family": "clifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q6-g18-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.3841857837991753e-07,
+        "B": 2.38418579462385e-07
+      },
+      "seconds": 522.7909807909746,
+      "language_tokens": 176,
+      "native_predictions": 11315,
+      "total_predictions": 11491,
+      "family": "clifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q6-g12-s4",
+      "condition": "plain",
+      "passed": true,
+      "absolute_errors": {
+        "A": 4.440892098500626e-16,
+        "B": 3.0470336348509264e-07
+      },
+      "seconds": 326.4650159010198,
+      "language_tokens": 7269,
+      "native_predictions": 0,
+      "total_predictions": 7269,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q6-g12-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 4.440892098500626e-16,
+        "B": 4.7728887508924345e-08
+      },
+      "seconds": 374.46342488913797,
+      "language_tokens": 140,
+      "native_predictions": 8231,
+      "total_predictions": 8371,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q3-g18-s1",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.353553390593274,
+        "B": 0.07322330470336402
+      },
+      "seconds": 470.9648575661704,
+      "language_tokens": 10115,
+      "native_predictions": 0,
+      "total_predictions": 10115,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q3-g18-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 3.3387635506310076e-07,
+        "B": 2.8614746605537533e-07
+      },
+      "seconds": 517.2545643579215,
+      "language_tokens": 158,
+      "native_predictions": 11315,
+      "total_predictions": 11473,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g18-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.49999999999999933,
+        "B": 0.26010969529663697
+      },
+      "seconds": 1.713965839939192,
+      "language_tokens": 22,
+      "native_predictions": 0,
+      "total_predictions": 22,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g18-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.3841857843542869e-07,
+        "B": 4.7728887953013555e-08
+      },
+      "seconds": 514.7204311778769,
+      "language_tokens": 167,
+      "native_predictions": 11315,
+      "total_predictions": 11482,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g24-s2",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.3535533905932725,
+        "B": 0.12499999999999958
+      },
+      "seconds": 1.8601718249265105,
+      "language_tokens": 29,
+      "native_predictions": 0,
+      "total_predictions": 29,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q4-g24-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 5.722949326658622e-07,
+        "B": 2.3841857868522887e-07
+      },
+      "seconds": 677.4735728551168,
+      "language_tokens": 197,
+      "native_predictions": 14399,
+      "total_predictions": 14596,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q3-g12-s1",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 2.7755575615628914e-16,
+        "B": 0.36427669529663664
+      },
+      "seconds": 1.4790677959099412,
+      "language_tokens": 20,
+      "native_predictions": 0,
+      "total_predictions": 20,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q3-g12-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.3841857882400674e-07,
+        "B": 4.772888761994665e-08
+      },
+      "seconds": 366.64204014092684,
+      "language_tokens": 134,
+      "native_predictions": 8231,
+      "total_predictions": 8365,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q3-g12-s4",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {},
+      "seconds": 735.0486913658679,
+      "language_tokens": 15033,
+      "native_predictions": 0,
+      "total_predictions": 15033,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q3-g12-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 3.813793822970979e-07,
+        "B": 4.7728887508924345e-08
+      },
+      "seconds": 371.2767998019699,
+      "language_tokens": 128,
+      "native_predictions": 8231,
+      "total_predictions": 8359,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q6-g18-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.35355339059327384,
+        "B": 0.17677669529663692
+      },
+      "seconds": 468.72335724299774,
+      "language_tokens": 10105,
+      "native_predictions": 0,
+      "total_predictions": 10105,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q6-g18-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 9.545777582276038e-08,
+        "B": 2.861474670129427e-07
+      },
+      "seconds": 527.2101763549726,
+      "language_tokens": 173,
+      "native_predictions": 11315,
+      "total_predictions": 11488,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q4-g18-s2",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.5000000000000007,
+        "B": 0.7500000000000003
+      },
+      "seconds": 616.698114303872,
+      "language_tokens": 12810,
+      "native_predictions": 0,
+      "total_predictions": 12810,
+      "family": "clifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q4-g18-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 6.661338147750939e-16,
+        "B": 2.384185794346294e-07
+      },
+      "seconds": 527.0888514299877,
+      "language_tokens": 170,
+      "native_predictions": 11315,
+      "total_predictions": 11485,
+      "family": "clifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q3-g18-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.5000000000000009,
+        "B": 0.5000000000000009
+      },
+      "seconds": 1.2890690101776272,
+      "language_tokens": 17,
+      "native_predictions": 0,
+      "total_predictions": 17,
+      "family": "clifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q3-g18-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 8.881784197001252e-16,
+        "B": 8.881784197001252e-16
+      },
+      "seconds": 526.9532151918393,
+      "language_tokens": 161,
+      "native_predictions": 11315,
+      "total_predictions": 11476,
+      "family": "clifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q6-g18-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.24999999999999928,
+        "B": 0.3124999999999993
+      },
+      "seconds": 1.680004786932841,
+      "language_tokens": 21,
+      "native_predictions": 0,
+      "total_predictions": 21,
+      "family": "clifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q6-g18-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 7.216449660063518e-16,
+        "B": 7.216449660063518e-16
+      },
+      "seconds": 535.2382316598669,
+      "language_tokens": 173,
+      "native_predictions": 11315,
+      "total_predictions": 11488,
+      "family": "clifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g12-s2",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.3901653905932738,
+        "B": 0.2133886952966369
+      },
+      "seconds": 651.9769499690738,
+      "language_tokens": 13367,
+      "native_predictions": 0,
+      "total_predictions": 13367,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q4-g12-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 9.545777582276038e-08,
+        "B": 4.772888791138019e-08
+      },
+      "seconds": 374.8658210129943,
+      "language_tokens": 134,
+      "native_predictions": 8231,
+      "total_predictions": 8365,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 12
+    },
+    {
+      "id": "clifford-q4-g18-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.5000000000000006,
+        "B": 0.7500000000000002
+      },
+      "seconds": 1.4072089360561222,
+      "language_tokens": 17,
+      "native_predictions": 0,
+      "total_predictions": 17,
+      "family": "clifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q4-g18-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 5.551115123125783e-16,
+        "B": 4.768371584806808e-07
+      },
+      "seconds": 528.7431586468592,
+      "language_tokens": 167,
+      "native_predictions": 11315,
+      "total_predictions": 11482,
+      "family": "clifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q3-g18-s2",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 1.0547118733938987e-15,
+        "B": 0.25000000000000056
+      },
+      "seconds": 1.907795927952975,
+      "language_tokens": 27,
+      "native_predictions": 0,
+      "total_predictions": 27,
+      "family": "clifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q3-g18-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 1.0547118733938987e-15,
+        "B": 5.273559366969494e-16
+      },
+      "seconds": 534.3755961779971,
+      "language_tokens": 161,
+      "native_predictions": 11315,
+      "total_predictions": 11476,
+      "family": "clifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q3-g24-s1",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 1.0547118733938987e-15,
+        "B": 0.8383883476483188
+      },
+      "seconds": 1.4104461290407926,
+      "language_tokens": 17,
+      "native_predictions": 0,
+      "total_predictions": 17,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q3-g24-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.3841858015627437e-07,
+        "B": 1.4307373386035493e-07
+      },
+      "seconds": 694.7901111911051,
+      "language_tokens": 194,
+      "native_predictions": 14399,
+      "total_predictions": 14593,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q3-g18-s2",
+      "condition": "plain",
+      "passed": true,
+      "absolute_errors": {
+        "A": 3.9059327228141427e-07,
+        "B": 3.0470336299937006e-07
+      },
+      "seconds": 663.2810421769973,
+      "language_tokens": 13345,
+      "native_predictions": 0,
+      "total_predictions": 13345,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q3-g18-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 3.8137938396243243e-07,
+        "B": 4.772888798076913e-08
+      },
+      "seconds": 536.5628490359522,
+      "language_tokens": 161,
+      "native_predictions": 11315,
+      "total_predictions": 11476,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g24-s1",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.12499999999999939,
+        "B": 0.926776695296637
+      },
+      "seconds": 1.6881039219442755,
+      "language_tokens": 19,
+      "native_predictions": 0,
+      "total_predictions": 19,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q4-g24-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 4.768371588137477e-07,
+        "B": 4.772888796689134e-08
+      },
+      "seconds": 703.7908139880747,
+      "language_tokens": 197,
+      "native_predictions": 14399,
+      "total_predictions": 14596,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q6-g12-s1",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.10355339059327387,
+        "B": 0.3124999999999996
+      },
+      "seconds": 1.5753150740638375,
+      "language_tokens": 21,
+      "native_predictions": 0,
+      "total_predictions": 21,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q6-g12-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 1.4296080327880212e-07,
+        "B": 2.3841857871298444e-07
+      },
+      "seconds": 367.3532750240993,
+      "language_tokens": 137,
+      "native_predictions": 8231,
+      "total_predictions": 8368,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q3-g24-s4",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.853553390593274,
+        "B": 0.073223304703363
+      },
+      "seconds": 1.4568924051709473,
+      "language_tokens": 17,
+      "native_predictions": 0,
+      "total_predictions": 17,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q3-g24-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 1.429608031955354e-07,
+        "B": 2.8614746708233163e-07
+      },
+      "seconds": 665.0653872971889,
+      "language_tokens": 197,
+      "native_predictions": 14399,
+      "total_predictions": 14596,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q4-g12-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 4.996003610813204e-16,
+        "B": 0.5732233047033637
+      },
+      "seconds": 1.384516339050606,
+      "language_tokens": 17,
+      "native_predictions": 0,
+      "total_predictions": 17,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q4-g12-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 4.996003610813204e-16,
+        "B": 1.9068969181468276e-07
+      },
+      "seconds": 366.30851934384555,
+      "language_tokens": 131,
+      "native_predictions": 8231,
+      "total_predictions": 8362,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q6-g24-s1",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.853553390593274,
+        "B": 0.25000000000000044
+      },
+      "seconds": 1.4180426141247153,
+      "language_tokens": 17,
+      "native_predictions": 0,
+      "total_predictions": 17,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q6-g24-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.9564807251802883e-06,
+        "B": 4.291534424244459e-06
+      },
+      "seconds": 676.4782392890193,
+      "language_tokens": 200,
+      "native_predictions": 14399,
+      "total_predictions": 14599,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q6-g24-s4",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {},
+      "seconds": 296.6379976901226,
+      "language_tokens": 6603,
+      "native_predictions": 0,
+      "total_predictions": 6603,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q6-g24-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 1.4209656971742035e-05,
+        "B": 4.5299530033182656e-06
+      },
+      "seconds": 674.5719096399844,
+      "language_tokens": 206,
+      "native_predictions": 14399,
+      "total_predictions": 14605,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 24
+    },
+    {
+      "id": "clifford-q3-g18-s1",
+      "condition": "plain",
+      "passed": true,
+      "absolute_errors": {
+        "A": 1.0547118733938987e-15,
+        "B": 1.0547118733938987e-15
+      },
+      "seconds": 725.3307129868772,
+      "language_tokens": 15100,
+      "native_predictions": 0,
+      "total_predictions": 15100,
+      "family": "clifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q3-g18-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.3841858015627437e-07,
+        "B": 1.0547118733938987e-15
+      },
+      "seconds": 524.284212145023,
+      "language_tokens": 161,
+      "native_predictions": 11315,
+      "total_predictions": 11476,
+      "family": "clifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q3-g12-s2",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.35355339059327306,
+        "B": 0.5732233047033635
+      },
+      "seconds": 1.3310019557829946,
+      "language_tokens": 17,
+      "native_predictions": 0,
+      "total_predictions": 17,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q3-g12-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 1.429608040837138e-07,
+        "B": 1.9068969159263816e-07
+      },
+      "seconds": 372.8324763381388,
+      "language_tokens": 134,
+      "native_predictions": 8231,
+      "total_predictions": 8365,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 12
+    },
+    {
+      "id": "clifford-q4-g18-s4",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.4999999999999993,
+        "B": 3.608224830031759e-16
+      },
+      "seconds": 712.0422127761412,
+      "language_tokens": 14742,
+      "native_predictions": 0,
+      "total_predictions": 14742,
+      "family": "clifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q4-g18-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 9.53674315684605e-07,
+        "B": 2.3841857874074002e-07
+      },
+      "seconds": 515.0842305989936,
+      "language_tokens": 170,
+      "native_predictions": 11315,
+      "total_predictions": 11485,
+      "family": "clifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g12-s1",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 4.996003610813204e-16,
+        "B": 0.8535533905932731
+      },
+      "seconds": 1.2735432698391378,
+      "language_tokens": 15,
+      "native_predictions": 0,
+      "total_predictions": 15,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q4-g12-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.3841857860196214e-07,
+        "B": 9.545777501784869e-08
+      },
+      "seconds": 360.1412082789466,
+      "language_tokens": 131,
+      "native_predictions": 8231,
+      "total_predictions": 8362,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q6-g24-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.35355339059327195,
+        "B": 0.073223304703363
+      },
+      "seconds": 1.3357273361179978,
+      "language_tokens": 17,
+      "native_predictions": 0,
+      "total_predictions": 17,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q6-g24-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 9.545777390762566e-08,
+        "B": 2.8614746708233163e-07
+      },
+      "seconds": 632.6714962141123,
+      "language_tokens": 206,
+      "native_predictions": 14399,
+      "total_predictions": 14605,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q3-g24-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 9.992007221626409e-16,
+        "B": 0.17677669529663698
+      },
+      "seconds": 445.1743545799982,
+      "language_tokens": 10168,
+      "native_predictions": 0,
+      "total_predictions": 10168,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 24
+    },
+    {
+      "id": "nonclifford-q3-g24-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 9.992007221626409e-16,
+        "B": 4.772888796689134e-08
+      },
+      "seconds": 634.3765087099746,
+      "language_tokens": 194,
+      "native_predictions": 14399,
+      "total_predictions": 14593,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 24
+    },
+    {
+      "id": "clifford-q6-g18-s1",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.4999999999999992,
+        "B": 0.7500000000000004
+      },
+      "seconds": 1.2592847130727023,
+      "language_tokens": 17,
+      "native_predictions": 0,
+      "total_predictions": 17,
+      "family": "clifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q6-g18-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 4.768371574259689e-07,
+        "B": 2.3841857949014056e-07
+      },
+      "seconds": 498.20599002111703,
+      "language_tokens": 170,
+      "native_predictions": 11315,
+      "total_predictions": 11485,
+      "family": "clifford",
+      "qubits": 6,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q3-g18-s4",
+      "condition": "plain",
+      "passed": true,
+      "absolute_errors": {
+        "A": 6.661338147750939e-16,
+        "B": 3.3306690738754696e-16
+      },
+      "seconds": 629.1002788180485,
+      "language_tokens": 14285,
+      "native_predictions": 0,
+      "total_predictions": 14285,
+      "family": "clifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q3-g18-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 6.661338147750939e-16,
+        "B": 2.384185794346294e-07
+      },
+      "seconds": 496.8703635339625,
+      "language_tokens": 173,
+      "native_predictions": 11315,
+      "total_predictions": 11488,
+      "family": "clifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g12-s4",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.24999999999999972,
+        "B": 0.23927669529663664
+      },
+      "seconds": 1.3302064100280404,
+      "language_tokens": 21,
+      "native_predictions": 0,
+      "total_predictions": 21,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q4-g12-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.7755575615628914e-16,
+        "B": 1.9068969148161585e-07
+      },
+      "seconds": 358.69532865379006,
+      "language_tokens": 134,
+      "native_predictions": 8231,
+      "total_predictions": 8365,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q6-g12-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.22855339059327387,
+        "B": 0.23927669529663675
+      },
+      "seconds": 1.7365407878533006,
+      "language_tokens": 22,
+      "native_predictions": 0,
+      "total_predictions": 22,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 12
+    },
+    {
+      "id": "nonclifford-q6-g12-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 1.4296080327880212e-07,
+        "B": 4.772888773096895e-08
+      },
+      "seconds": 361.04427876113914,
+      "language_tokens": 140,
+      "native_predictions": 8231,
+      "total_predictions": 8371,
+      "family": "nonclifford",
+      "qubits": 6,
+      "gate_count": 12
+    },
+    {
+      "id": "clifford-q4-g18-s1",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {},
+      "seconds": 11.07303887209855,
+      "language_tokens": 244,
+      "native_predictions": 0,
+      "total_predictions": 244,
+      "family": "clifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "clifford-q4-g18-s1",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 8.881784197001252e-16,
+        "B": 7.152557377487767e-07
+      },
+      "seconds": 487.67305385600775,
+      "language_tokens": 167,
+      "native_predictions": 11315,
+      "total_predictions": 11482,
+      "family": "clifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q3-g18-s3",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 9.43689570931383e-16,
+        "B": 0.1767766952966363
+      },
+      "seconds": 525.0123550700955,
+      "language_tokens": 11982,
+      "native_predictions": 0,
+      "total_predictions": 11982,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q3-g18-s3",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 4.768371591468146e-07,
+        "B": 2.8614746638844224e-07
+      },
+      "seconds": 489.44648035406135,
+      "language_tokens": 161,
+      "native_predictions": 11315,
+      "total_predictions": 11476,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g18-s2",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.5000000000000004,
+        "B": 0.926776695296637
+      },
+      "seconds": 645.5144340628758,
+      "language_tokens": 14683,
+      "native_predictions": 0,
+      "total_predictions": 14683,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q4-g18-s2",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 4.440892098500626e-16,
+        "B": 4.772888796689134e-08
+      },
+      "seconds": 481.02654345706105,
+      "language_tokens": 164,
+      "native_predictions": 11315,
+      "total_predictions": 11479,
+      "family": "nonclifford",
+      "qubits": 4,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q3-g18-s4",
+      "condition": "plain",
+      "passed": false,
+      "absolute_errors": {
+        "A": 0.5000000000000008,
+        "B": 0.0732233047033638
+      },
+      "seconds": 679.0391180398874,
+      "language_tokens": 15424,
+      "native_predictions": 0,
+      "total_predictions": 15424,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 18
+    },
+    {
+      "id": "nonclifford-q3-g18-s4",
+      "condition": "qwenqpu",
+      "passed": true,
+      "absolute_errors": {
+        "A": 2.3841857832440638e-07,
+        "B": 2.8614746627741994e-07
+      },
+      "seconds": 492.8828588910401,
+      "language_tokens": 158,
+      "native_predictions": 11315,
+      "total_predictions": 11473,
+      "family": "nonclifford",
+      "qubits": 3,
+      "gate_count": 18
+    }
+  ],
+  "summary": {
+    "plain": {
+      "correct": 4,
+      "scheduled": 48,
+      "wilson_95": [
+        0.032883756818091775,
+        0.1955330179036728
+      ]
+    },
+    "qwenqpu": {
+      "correct": 48,
+      "scheduled": 48,
+      "wilson_95": [
+        0.9258998703338824,
+        0.9999999999999999
+      ]
+    }
+  },
+  "paired": {
+    "qwenqpu_only": 44,
+    "plain_only": 0,
+    "both_correct": 4,
+    "both_failed": 0,
+    "difference": 0.9166666666666666,
+    "difference_exact_conservative_95": [
+      0.6950386445083869,
+      0.9812440747173072
+    ],
+    "exact_mcnemar_two_sided": 1.1368683772161603e-13
+  },
+  "subsets": {
+    "nonclifford_primary": {
+      "summary": {
+        "plain": {
+          "correct": 2,
+          "scheduled": 36,
+          "wilson_95": [
+            0.015369986664161853,
+            0.18144657208647252
+          ]
+        },
+        "qwenqpu": {
+          "correct": 36,
+          "scheduled": 36,
+          "wilson_95": [
+            0.9035813714055363,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 34,
+        "plain_only": 0,
+        "both_correct": 2,
+        "both_failed": 0,
+        "difference": 0.9444444444444444,
+        "difference_exact_conservative_95": [
+          0.6781366810873868,
+          0.9953033669565674
+        ],
+        "exact_mcnemar_two_sided": 1.1641532182693481e-10
+      }
+    },
+    "clifford_control": {
+      "summary": {
+        "plain": {
+          "correct": 2,
+          "scheduled": 12,
+          "wilson_95": [
+            0.04696514218385378,
+            0.4480308622529734
+          ]
+        },
+        "qwenqpu": {
+          "correct": 12,
+          "scheduled": 12,
+          "wilson_95": [
+            0.7575059933447592,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 10,
+        "plain_only": 0,
+        "both_correct": 2,
+        "both_failed": 0,
+        "difference": 0.8333333333333334,
+        "difference_exact_conservative_95": [
+          0.16899832576674778,
+          0.985559819567051
+        ],
+        "exact_mcnemar_two_sided": 0.001953125
+      }
+    },
+    "qubits_3": {
+      "summary": {
+        "plain": {
+          "correct": 3,
+          "scheduled": 16,
+          "wilson_95": [
+            0.06591599071428142,
+            0.4300888096197414
+          ]
+        },
+        "qwenqpu": {
+          "correct": 16,
+          "scheduled": 16,
+          "wilson_95": [
+            0.8063923194655637,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 13,
+        "plain_only": 0,
+        "both_correct": 3,
+        "both_failed": 0,
+        "difference": 0.8125,
+        "difference_exact_conservative_95": [
+          0.2682467411131915,
+          0.9688367769093573
+        ],
+        "exact_mcnemar_two_sided": 0.000244140625
+      }
+    },
+    "qubits_4": {
+      "summary": {
+        "plain": {
+          "correct": 0,
+          "scheduled": 16,
+          "wilson_95": [
+            0,
+            0.1936076805344365
+          ]
+        },
+        "qwenqpu": {
+          "correct": 16,
+          "scheduled": 16,
+          "wilson_95": [
+            0.8063923194655637,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 16,
+        "plain_only": 0,
+        "both_correct": 0,
+        "both_failed": 0,
+        "difference": 1.0,
+        "difference_exact_conservative_95": [
+          0.520851713707317,
+          1.0
+        ],
+        "exact_mcnemar_two_sided": 3.0517578125e-05
+      }
+    },
+    "qubits_6": {
+      "summary": {
+        "plain": {
+          "correct": 1,
+          "scheduled": 16,
+          "wilson_95": [
+            0.01111934476464252,
+            0.28328737570298945
+          ]
+        },
+        "qwenqpu": {
+          "correct": 16,
+          "scheduled": 16,
+          "wilson_95": [
+            0.8063923194655637,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 15,
+        "plain_only": 0,
+        "both_correct": 1,
+        "both_failed": 0,
+        "difference": 0.9375,
+        "difference_exact_conservative_95": [
+          0.4225229863620488,
+          0.9992141350657933
+        ],
+        "exact_mcnemar_two_sided": 6.103515625e-05
+      }
+    },
+    "nonclifford_gates_12": {
+      "summary": {
+        "plain": {
+          "correct": 1,
+          "scheduled": 12,
+          "wilson_95": [
+            0.014865094404917095,
+            0.35387991114111694
+          ]
+        },
+        "qwenqpu": {
+          "correct": 12,
+          "scheduled": 12,
+          "wilson_95": [
+            0.7575059933447592,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 11,
+        "plain_only": 0,
+        "both_correct": 1,
+        "both_failed": 0,
+        "difference": 0.9166666666666666,
+        "difference_exact_conservative_95": [
+          0.26728789743035974,
+          0.9989523173525205
+        ],
+        "exact_mcnemar_two_sided": 0.0009765625
+      }
+    },
+    "nonclifford_gates_18": {
+      "summary": {
+        "plain": {
+          "correct": 1,
+          "scheduled": 12,
+          "wilson_95": [
+            0.014865094404917095,
+            0.35387991114111694
+          ]
+        },
+        "qwenqpu": {
+          "correct": 12,
+          "scheduled": 12,
+          "wilson_95": [
+            0.7575059933447592,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 11,
+        "plain_only": 0,
+        "both_correct": 1,
+        "both_failed": 0,
+        "difference": 0.9166666666666666,
+        "difference_exact_conservative_95": [
+          0.26728789743035974,
+          0.9989523173525205
+        ],
+        "exact_mcnemar_two_sided": 0.0009765625
+      }
+    },
+    "nonclifford_gates_24": {
+      "summary": {
+        "plain": {
+          "correct": 0,
+          "scheduled": 12,
+          "wilson_95": [
+            2.7755575615628914e-17,
+            0.24249400665524085
+          ]
+        },
+        "qwenqpu": {
+          "correct": 12,
+          "scheduled": 12,
+          "wilson_95": [
+            0.7575059933447592,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 12,
+        "plain_only": 0,
+        "both_correct": 0,
+        "both_failed": 0,
+        "difference": 1.0,
+        "difference_exact_conservative_95": [
+          0.388158841054579,
+          1.0
+        ],
+        "exact_mcnemar_two_sided": 0.00048828125
+      }
+    }
+  },
+  "source_score_sha256": "30c541cf0dd4be7b70353cfbb5a5e63f986bad120c69fa4793daef7a5acb3d59",
+  "data_extract_sha256": "051643542579d3c78719c4db2fd6a3d777d5d447e6b8acccbf6ae2e94c52b9f6",
+  "purpose": "Plotting extract, not a replacement for the complete independently reviewed score"
+}

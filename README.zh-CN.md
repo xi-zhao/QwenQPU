@@ -8,21 +8,21 @@ QwenQPU 为 Qwen3.5-4B 加入固定权重 QPU。四个标准 Qwen 层存储量�
 
 ## Benchmark
 
-![Qwen vs QwenQPU](assets/benchmark-added-layers.png)
+![Qwen vs QwenQPU](assets/r5/benchmark-main.png)
 
 从全零态出发，执行题目给定的线路，计算两个指定测量事件的概率。新版对照评测包含 48 条线路，使用 3、4、6 比特，以及 12、18、24 个顺序门操作。两组使用相同语言权重，每题总预算均为 16,384 次预测，QwenQPU 的原生执行预测也计入预算。
 
-**中途结果：截至 11 月 4 日 00:26 UTC，完成 48 题中的 27 对。**
+**Qwen：4/48（8.3%）。QwenQPU：48/48（100%）。**
 
 | 计算任务 | Qwen | QwenQPU |
 |---|---:|---:|
-| 非 Clifford 线路（已完成 20 题） | 1/20 | **20/20** |
-| Clifford 对照（已完成 7 题） | 0/7 | **7/7** |
-| 已完成配对合计（27 题） | 1/27 | **27/27** |
+| 非 Clifford 线路（36 题） | 2/36 | **36/36** |
+| Clifford 对照（12 题） | 2/12 | **12/12** |
+| 全部配对任务（48 题） | 4/48 | **48/48** |
 
-两个概率都须与独立 Qiskit 参考值相差不超过 `5e-5`。QwenQPU 提交的线路和测量事件也须与题目一致。上述已完成题中，QwenQPU 的最大概率误差为 `1.326e-5`。评测仍在运行。[题目、协议与中途数据](docs/BENCHMARK_ADDED_LAYERS.md)。
+两个概率都须与独立 Qiskit 参考值相差不超过 `5e-5`。QwenQPU 提交的线路和测量事件也须与题目一致。QwenQPU 的最大概率误差为 `1.421e-5`。[题目、方法与完整结果](docs/BENCHMARK_ADDED_LAYERS.md)。
 
-这些已完成题显示，新增层提高了线路概率计算的正确率。六比特 H3–T3–H3 示例中，QwenQPU 给出 `P(q3=1) = 0.1464464664`，参考值为 `0.1464466094`；六比特 GHZ 线路的全零和全一概率均为 `0.5`。[完整请求与结果](evidence/added-layers/completed-demonstrations.json)。
+加入 QPU 层后，44 道原本答错的题得到正确结果，另外 4 道两组均答对。六比特 H3–T3–H3 示例中，QwenQPU 给出 `P(q3=1) = 0.1464464664`，参考值为 `0.1464466094`；六比特 GHZ 线路的全零和全一概率均为 `0.5`。[完整请求与结果](evidence/added-layers/completed-demonstrations.json)。
 
 ## 实现
 

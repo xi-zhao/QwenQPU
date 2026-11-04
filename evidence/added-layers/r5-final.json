@@ -1,0 +1,340 @@
+{
+  "version": "native-added-layers-computation-r5-formal",
+  "status": "completed",
+  "completed_utc": "2026-11-04T04:46:32.378765+00:00",
+  "conditions": 96,
+  "tasks": 48,
+  "score_sha256": "30c541cf0dd4be7b70353cfbb5a5e63f986bad120c69fa4793daef7a5acb3d59",
+  "frozen_sha256": "37f03134726b33a8c78785dfd1f4e41a067e71560fcc3c70f36ef624f3f00421",
+  "summary": {
+    "plain": {
+      "correct": 4,
+      "scheduled": 48,
+      "wilson_95": [
+        0.032883756818091775,
+        0.1955330179036728
+      ]
+    },
+    "qwenqpu": {
+      "correct": 48,
+      "scheduled": 48,
+      "wilson_95": [
+        0.9258998703338824,
+        0.9999999999999999
+      ]
+    }
+  },
+  "paired": {
+    "qwenqpu_only": 44,
+    "plain_only": 0,
+    "both_correct": 4,
+    "both_failed": 0,
+    "difference": 0.9166666666666666,
+    "difference_exact_conservative_95": [
+      0.6950386445083869,
+      0.9812440747173072
+    ],
+    "exact_mcnemar_two_sided": 1.1368683772161603e-13
+  },
+  "subsets": {
+    "nonclifford_primary": {
+      "summary": {
+        "plain": {
+          "correct": 2,
+          "scheduled": 36,
+          "wilson_95": [
+            0.015369986664161853,
+            0.18144657208647252
+          ]
+        },
+        "qwenqpu": {
+          "correct": 36,
+          "scheduled": 36,
+          "wilson_95": [
+            0.9035813714055363,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 34,
+        "plain_only": 0,
+        "both_correct": 2,
+        "both_failed": 0,
+        "difference": 0.9444444444444444,
+        "difference_exact_conservative_95": [
+          0.6781366810873868,
+          0.9953033669565674
+        ],
+        "exact_mcnemar_two_sided": 1.1641532182693481e-10
+      }
+    },
+    "clifford_control": {
+      "summary": {
+        "plain": {
+          "correct": 2,
+          "scheduled": 12,
+          "wilson_95": [
+            0.04696514218385378,
+            0.4480308622529734
+          ]
+        },
+        "qwenqpu": {
+          "correct": 12,
+          "scheduled": 12,
+          "wilson_95": [
+            0.7575059933447592,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 10,
+        "plain_only": 0,
+        "both_correct": 2,
+        "both_failed": 0,
+        "difference": 0.8333333333333334,
+        "difference_exact_conservative_95": [
+          0.16899832576674778,
+          0.985559819567051
+        ],
+        "exact_mcnemar_two_sided": 0.001953125
+      }
+    },
+    "qubits_3": {
+      "summary": {
+        "plain": {
+          "correct": 3,
+          "scheduled": 16,
+          "wilson_95": [
+            0.06591599071428142,
+            0.4300888096197414
+          ]
+        },
+        "qwenqpu": {
+          "correct": 16,
+          "scheduled": 16,
+          "wilson_95": [
+            0.8063923194655637,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 13,
+        "plain_only": 0,
+        "both_correct": 3,
+        "both_failed": 0,
+        "difference": 0.8125,
+        "difference_exact_conservative_95": [
+          0.2682467411131915,
+          0.9688367769093573
+        ],
+        "exact_mcnemar_two_sided": 0.000244140625
+      }
+    },
+    "qubits_4": {
+      "summary": {
+        "plain": {
+          "correct": 0,
+          "scheduled": 16,
+          "wilson_95": [
+            0,
+            0.1936076805344365
+          ]
+        },
+        "qwenqpu": {
+          "correct": 16,
+          "scheduled": 16,
+          "wilson_95": [
+            0.8063923194655637,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 16,
+        "plain_only": 0,
+        "both_correct": 0,
+        "both_failed": 0,
+        "difference": 1.0,
+        "difference_exact_conservative_95": [
+          0.520851713707317,
+          1.0
+        ],
+        "exact_mcnemar_two_sided": 3.0517578125e-05
+      }
+    },
+    "qubits_6": {
+      "summary": {
+        "plain": {
+          "correct": 1,
+          "scheduled": 16,
+          "wilson_95": [
+            0.01111934476464252,
+            0.28328737570298945
+          ]
+        },
+        "qwenqpu": {
+          "correct": 16,
+          "scheduled": 16,
+          "wilson_95": [
+            0.8063923194655637,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 15,
+        "plain_only": 0,
+        "both_correct": 1,
+        "both_failed": 0,
+        "difference": 0.9375,
+        "difference_exact_conservative_95": [
+          0.4225229863620488,
+          0.9992141350657933
+        ],
+        "exact_mcnemar_two_sided": 6.103515625e-05
+      }
+    },
+    "nonclifford_gates_12": {
+      "summary": {
+        "plain": {
+          "correct": 1,
+          "scheduled": 12,
+          "wilson_95": [
+            0.014865094404917095,
+            0.35387991114111694
+          ]
+        },
+        "qwenqpu": {
+          "correct": 12,
+          "scheduled": 12,
+          "wilson_95": [
+            0.7575059933447592,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 11,
+        "plain_only": 0,
+        "both_correct": 1,
+        "both_failed": 0,
+        "difference": 0.9166666666666666,
+        "difference_exact_conservative_95": [
+          0.26728789743035974,
+          0.9989523173525205
+        ],
+        "exact_mcnemar_two_sided": 0.0009765625
+      }
+    },
+    "nonclifford_gates_18": {
+      "summary": {
+        "plain": {
+          "correct": 1,
+          "scheduled": 12,
+          "wilson_95": [
+            0.014865094404917095,
+            0.35387991114111694
+          ]
+        },
+        "qwenqpu": {
+          "correct": 12,
+          "scheduled": 12,
+          "wilson_95": [
+            0.7575059933447592,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 11,
+        "plain_only": 0,
+        "both_correct": 1,
+        "both_failed": 0,
+        "difference": 0.9166666666666666,
+        "difference_exact_conservative_95": [
+          0.26728789743035974,
+          0.9989523173525205
+        ],
+        "exact_mcnemar_two_sided": 0.0009765625
+      }
+    },
+    "nonclifford_gates_24": {
+      "summary": {
+        "plain": {
+          "correct": 0,
+          "scheduled": 12,
+          "wilson_95": [
+            2.7755575615628914e-17,
+            0.24249400665524085
+          ]
+        },
+        "qwenqpu": {
+          "correct": 12,
+          "scheduled": 12,
+          "wilson_95": [
+            0.7575059933447592,
+            1
+          ]
+        }
+      },
+      "paired": {
+        "qwenqpu_only": 12,
+        "plain_only": 0,
+        "both_correct": 0,
+        "both_failed": 0,
+        "difference": 1.0,
+        "difference_exact_conservative_95": [
+          0.388158841054579,
+          1.0
+        ],
+        "exact_mcnemar_two_sided": 0.00048828125
+      }
+    }
+  },
+  "max_qpu_probability_error": 1.4209656971742035e-05,
+  "failures": {
+    "plain": {
+      "probability_wrong": 41,
+      "conflicting_answers": 2,
+      "missing_required_probabilities": 1
+    },
+    "qwenqpu": {}
+  },
+  "termination": {
+    "plain": {
+      "eos": 48
+    },
+    "qwenqpu": {
+      "tool_call_then_numeric_completion": 48
+    }
+  },
+  "model_alive": false,
+  "gpu_after": "1 MiB used, 81038 MiB free, utilization 0%",
+  "integrity_review": {
+    "conditions": 96,
+    "frozen_files": 27,
+    "sha256": "48b158248e43df3942250c927a904180f06d53ce88df2904915c384d4339d370"
+  },
+  "reviewed_archive": {
+    "name": "QwenQPU-native-benchmark-r5-reviewed.zip",
+    "bytes": 5269820,
+    "sha256": "58870ed526b9a9d0191607df4d7075688e0eee550278942143a7352d578f93bc"
+  },
+  "cost": {
+    "plain": {
+      "language_tokens": 238639,
+      "native_predictions": 0,
+      "total_seconds": 11138.899057726143,
+      "median_seconds": 1.865100456518121
+    },
+    "qwenqpu": {
+      "language_tokens": 8007,
+      "native_predictions": 543120,
+      "total_seconds": 24974.0916750459,
+      "median_seconds": 524.2043241264764
+    }
+  }
+}

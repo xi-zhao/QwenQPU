@@ -1,0 +1,15 @@
+{
+  "score_sha256": "637a442843b540b03fb2790226ddbf4f07d3640019362b95821e1e2f27f201e3",
+  "protocol": "native-added-layers-computation-r5-formal",
+  "design_reference": "https://github.com/divagr18/qwenputer/blob/main/docs/benchmarks-arith.png",
+  "figures": {
+    "benchmark-main": "Frozen r5. Main endpoint: 36 non-Clifford tasks; gate strata n=12 each. Controls n=12. Exact probabilities, independent Qiskit reference, absolute tolerance 5e-5. Native QPU is the fixed added-layer simulator. The primary group overlaps its three gate strata.",
+    "benchmark-paired": "Paired end-to-end outcomes, including format, time and budget failures. No core-only substitution. Wilson intervals describe the predefined task sample.",
+    "benchmark-errors": "Two event probabilities per task; maximum absolute error shown. Faithfulness is separately required even when numerical outputs happen to match.",
+    "benchmark-cost": "Wall time includes decoding, native execution and progress I/O. Points include every condition; success and failure markers are distinct. Prediction count is not a hardware speed comparison."
+  },
+  "source_score_sha256": "30c541cf0dd4be7b70353cfbb5a5e63f986bad120c69fa4793daef7a5acb3d59",
+  "data_extract_sha256": "051643542579d3c78719c4db2fd6a3d777d5d447e6b8acccbf6ae2e94c52b9f6",
+  "task_sha256": "b6d892f5441f7b66fcc63d3c4a194188b5b84c410376225ae9d779feb01d0759",
+  "reproduction_command": "python tools/render_r5_results.py"
+}

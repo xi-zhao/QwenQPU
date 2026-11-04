@@ -11,29 +11,29 @@ produce the numerical answer in the model's forward pass.
 
 ## Benchmarks
 
-![Qwen vs QwenQPU](assets/benchmark-added-layers.png)
+![Qwen vs QwenQPU](assets/r5/benchmark-main.png)
 
 Starting from the all-zero state, apply a supplied circuit and calculate two
-specified measurement-event probabilities. The new paired benchmark contains
+specified measurement-event probabilities. The paired benchmark contains
 48 circuits on 3, 4 and 6 qubits, with 12, 18 or 24 sequential gates. Both
 conditions use the same language weights and a 16,384-prediction total budget;
 QwenQPU's native execution predictions count toward that budget.
 
-**Interim results: 27 of 48 paired tasks completed at 00:26 UTC, November 4.**
+**Qwen: 4/48 (8.3%). QwenQPU: 48/48 (100%).**
 
 | Calculation tasks | Qwen | QwenQPU |
 |---|---:|---:|
-| Non-Clifford circuits (20 completed) | 1/20 | **20/20** |
-| Clifford controls (7 completed) | 0/7 | **7/7** |
-| All completed pairs (27) | 1/27 | **27/27** |
+| Non-Clifford circuits (36) | 2/36 | **36/36** |
+| Clifford controls (12) | 2/12 | **12/12** |
+| All paired tasks (48) | 4/48 | **48/48** |
 
 Both requested probabilities must agree with independent Qiskit values within
 `5e-5`. QwenQPU must also preserve the requested circuit and measurement events.
-Its maximum probability error in these completed pairs is `1.326e-5`.
-The run is continuing. [Tasks, protocol and interim data](docs/BENCHMARK_ADDED_LAYERS.md).
+Its maximum probability error is `1.421e-5`.
+[Tasks, methods and full results](docs/BENCHMARK_ADDED_LAYERS.md).
 
-The completed pairs show that the added layers improve circuit-probability
-calculation. For a six-qubit H3–T3–H3 example, QwenQPU returns
+The added layers turn 44 incorrect answers into correct calculations; both
+conditions answer the other four tasks correctly. For a six-qubit H3–T3–H3 example, QwenQPU returns
 `P(q3=1) = 0.1464464664`; the reference is `0.1464466094`.
 A six-qubit GHZ circuit returns `0.5` for both all-zero and all-one outcomes.
 [Complete requests and results](evidence/added-layers/completed-demonstrations.json).
