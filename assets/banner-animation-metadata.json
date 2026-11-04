@@ -1,0 +1,28 @@
+{
+  "generator": "tools/render_banner_animation.py",
+  "trace_path": "evidence/added-layers/banner-phase-trace.json",
+  "trace_sha256": "61b5674076706453ea4e146a7c2d4996488448fdd2fe5b147125666362daa4f9",
+  "source_execution_sha256": "434670751b87c2225726929ce2d52a19b829d06671deaeee10d55bce839a855e",
+  "design_reference": "https://divagr.com/qwenputer/demo.gif",
+  "logical_state_grid": "8 by 8, row-major amplitude addresses 0..63",
+  "numerical_values": "Recorded native output digits decoded at gate boundaries",
+  "layer_strip": "Schematic group roles, not physical activation telemetry",
+  "timing": "Authored presentation schedule",
+  "size": [
+    1440,
+    440
+  ],
+  "duration_ms": 10030,
+  "frames": 26,
+  "probability": 0.14644646644592285,
+  "reconstructed_born_check": 0.14644659879201072,
+  "static_left_verified": true,
+  "preserved_animation_sha256": {
+    "demo.gif": "0f0dae192adb5575bbab1024bc04c76629de4bd5762b2c580502822662710481",
+    "demo.mp4": "8b254d6d956528e20c968fbaf5f9056e86dd32ced5e9ef6b09ba57bbcb22a514"
+  },
+  "artifacts": {
+    "assets/banner-added-layers.gif": "cb8073de7e15904815b1724a7d344b1445ea49865e59598368f5983a5af3507e",
+    "assets/banner-added-layers-preview.png": "1693390ab52bdd817db8f1e8258009284e7195aa0cf014408889f68a0ead173f"
+  }
+}

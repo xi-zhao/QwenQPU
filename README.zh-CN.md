@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner-added-layers.png" alt="QwenQPU — QPU inside a language model" width="100%">
+  <img src="assets/banner-added-layers.gif" alt="QwenQPU — QPU inside a language model" width="100%">
 </p>
 
 [English](README.md) · [新增层实现](docs/ADDED_LAYERS.md) · [评测方法](docs/BENCHMARK_ADDED_LAYERS.md) · [Hugging Face](https://huggingface.co/xi-zhao/QwenQPU)
