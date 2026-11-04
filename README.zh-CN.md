@@ -39,7 +39,7 @@ python research/standard_layers/demo_repaired_full_model.py \
   --out ./reproduced/added-layer-demo
 ```
 
-使用已有本地语言 checkpoint，依赖见[运行说明](docs/ADDED_LAYERS.md#build-and-run)。构造器生成约 1.42 GB 固定权重；完整组装模型使用约 36.67 GB FP32 权重。新版完整序列化 checkpoint 尚待发布，HF 根目录目前仍是此前组合版。[权重清单](evidence/added-layers/weight-manifest.json)。
+使用已有本地语言 checkpoint，依赖见[运行说明](docs/ADDED_LAYERS.md#build-and-run)。构造器生成约 1.42 GB 固定权重；完整组装模型使用约 36.67 GB FP32 权重。[权重清单](evidence/added-layers/weight-manifest.json)。
 
 ## 此前组合版
 

@@ -64,8 +64,7 @@ python research/standard_layers/demo_repaired_full_model.py \
 Use the existing local language checkpoint and the dependencies in the
 [setup instructions](docs/ADDED_LAYERS.md#build-and-run). The prefix constructor
 writes about 1.42 GB of fixed weights. Full assembly uses 36.67 GB of FP32 weights.
-The new complete serialized checkpoint is pending; the current HF root still
-contains the earlier composite release. [Weight manifest](evidence/added-layers/weight-manifest.json).
+[Weight manifest](evidence/added-layers/weight-manifest.json).
 
 ## Earlier composite version
 
